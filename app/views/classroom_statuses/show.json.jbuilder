@@ -1,0 +1,1 @@
+json.partial! "classroom_statuses/classroom_status", classroom_status: @classroom_status

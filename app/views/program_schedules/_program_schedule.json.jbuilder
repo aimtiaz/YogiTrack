@@ -1,0 +1,2 @@
+json.extract! program_schedule, :id, :program_id, :instructor_id, :date, :start_time, :end_time, :classroom_id, :class_size, :created_at, :updated_at
+json.url program_schedule_url(program_schedule, format: :json)

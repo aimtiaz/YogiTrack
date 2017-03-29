@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Classroom status:</strong>
+  <%= @classroom_status.classroom_status %>
+</p>
+
+<%= link_to 'Edit', edit_classroom_status_path(@classroom_status) %> |
+<%= link_to 'Back', classroom_statuses_path %>

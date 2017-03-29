@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Program:</strong>
+  <%= @program_schedule.program_id %>
+</p>
+
+<p>
+  <strong>Instructor:</strong>
+  <%= @program_schedule.instructor_id %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @program_schedule.date %>
+</p>
+
+<p>
+  <strong>Start time:</strong>
+  <%= @program_schedule.start_time %>
+</p>
+
+<p>
+  <strong>End time:</strong>
+  <%= @program_schedule.end_time %>
+</p>
+
+<p>
+  <strong>Classroom:</strong>
+  <%= @program_schedule.classroom_id %>
+</p>
+
+<p>
+  <strong>Class size:</strong>
+  <%= @program_schedule.class_size %>
+</p>
+
+<%= link_to 'Edit', edit_program_schedule_path(@program_schedule) %> |
+<%= link_to 'Back', program_schedules_path %>

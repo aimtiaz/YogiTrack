@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Program Schedules</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Program</th>
+      <th>Instructor</th>
+      <th>Date</th>
+      <th>Start time</th>
+      <th>End time</th>
+      <th>Classroom</th>
+      <th>Class size</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @program_schedules.each do |program_schedule| %>
+      <tr>
+        <td><%= program_schedule.program_id %></td>
+        <td><%= program_schedule.instructor_id %></td>
+        <td><%= program_schedule.date %></td>
+        <td><%= program_schedule.start_time %></td>
+        <td><%= program_schedule.end_time %></td>
+        <td><%= program_schedule.classroom_id %></td>
+        <td><%= program_schedule.class_size %></td>
+        <td><%= link_to 'Show', program_schedule %></td>
+        <td><%= link_to 'Edit', edit_program_schedule_path(program_schedule) %></td>
+        <td><%= link_to 'Destroy', program_schedule, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Program schedule', new_program_schedule_path %>
