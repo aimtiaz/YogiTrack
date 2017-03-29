@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :employees
   resources :program_schedules
   resources :instructors
   resources :equipment
