@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :private_lessons
+  resources :equipment_checkouts
+  resources :program_rosters
+  resources :customers
   resources :employees
   resources :program_schedules
   resources :instructors

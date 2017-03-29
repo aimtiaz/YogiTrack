@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170329041845) do
+ActiveRecord::Schema.define(version: 20170329045703) do
 
   create_table "classroom_statuses", force: :cascade do |t|
     t.string   "classroom_status", limit: 4000
@@ -24,6 +24,19 @@ ActiveRecord::Schema.define(version: 20170329041845) do
     t.integer  "classroom_status_id",   limit: 4
     t.datetime "created_at",                         null: false
     t.datetime "updated_at",                         null: false
+  end
+
+  create_table "customers", force: :cascade do |t|
+    t.string   "c_first_name",    limit: 4000
+    t.string   "c_last_name",     limit: 4000
+    t.text     "address",         limit: 2147483647
+    t.string   "phone",           limit: 4000
+    t.string   "emergency_phone", limit: 4000
+    t.string   "email",           limit: 4000
+    t.integer  "membership_id",   limit: 4
+    t.datetime "created_at",                         null: false
+    t.datetime "updated_at",                         null: false
+    t.text     "health_concern",  limit: 2147483647
   end
 
   create_table "employees", force: :cascade do |t|
@@ -43,6 +56,16 @@ ActiveRecord::Schema.define(version: 20170329041845) do
     t.integer  "equipment_status_id",   limit: 4
     t.datetime "created_at",                         null: false
     t.datetime "updated_at",                         null: false
+  end
+
+  create_table "equipment_checkouts", force: :cascade do |t|
+    t.integer  "equipment_id",        limit: 4
+    t.date     "checkout_date"
+    t.date     "checkin_date"
+    t.integer  "equipment_status_id", limit: 4
+    t.integer  "customer_id",         limit: 4
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
   end
 
   create_table "equipment_statuses", force: :cascade do |t|
@@ -77,6 +100,25 @@ ActiveRecord::Schema.define(version: 20170329041845) do
     t.string   "cost",                   limit: 4000
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+  end
+
+  create_table "private_lessons", force: :cascade do |t|
+    t.integer  "instructor_id", limit: 4
+    t.integer  "customer_id",   limit: 4
+    t.date     "date"
+    t.time     "time",                             precision: 7
+    t.string   "cost",          limit: 4000
+    t.integer  "classroom_id",  limit: 4
+    t.text     "comments",      limit: 2147483647
+    t.datetime "created_at",                                     null: false
+    t.datetime "updated_at",                                     null: false
+  end
+
+  create_table "program_rosters", force: :cascade do |t|
+    t.integer  "program_schedule_id", limit: 4
+    t.integer  "customer_id",         limit: 4
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
   end
 
   create_table "program_schedules", force: :cascade do |t|
