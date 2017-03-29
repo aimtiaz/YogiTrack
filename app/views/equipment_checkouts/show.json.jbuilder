@@ -1,0 +1,1 @@
+json.partial! "equipment_checkouts/equipment_checkout", equipment_checkout: @equipment_checkout

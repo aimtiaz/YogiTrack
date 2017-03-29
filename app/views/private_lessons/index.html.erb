@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Private Lessons</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Instructor</th>
+      <th>Customer</th>
+      <th>Date</th>
+      <th>Time</th>
+      <th>Cost</th>
+      <th>Classroom</th>
+      <th>Comments</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @private_lessons.each do |private_lesson| %>
+      <tr>
+        <td><%= private_lesson.instructor_id %></td>
+        <td><%= private_lesson.customer_id %></td>
+        <td><%= private_lesson.date %></td>
+        <td><%= private_lesson.time %></td>
+        <td><%= private_lesson.cost %></td>
+        <td><%= private_lesson.classroom_id %></td>
+        <td><%= private_lesson.comments %></td>
+        <td><%= link_to 'Show', private_lesson %></td>
+        <td><%= link_to 'Edit', edit_private_lesson_path(private_lesson) %></td>
+        <td><%= link_to 'Destroy', private_lesson, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Private lesson', new_private_lesson_path %>

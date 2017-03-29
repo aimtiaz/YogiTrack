@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Instructor:</strong>
+  <%= @private_lesson.instructor_id %>
+</p>
+
+<p>
+  <strong>Customer:</strong>
+  <%= @private_lesson.customer_id %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @private_lesson.date %>
+</p>
+
+<p>
+  <strong>Time:</strong>
+  <%= @private_lesson.time %>
+</p>
+
+<p>
+  <strong>Cost:</strong>
+  <%= @private_lesson.cost %>
+</p>
+
+<p>
+  <strong>Classroom:</strong>
+  <%= @private_lesson.classroom_id %>
+</p>
+
+<p>
+  <strong>Comments:</strong>
+  <%= @private_lesson.comments %>
+</p>
+
+<%= link_to 'Edit', edit_private_lesson_path(@private_lesson) %> |
+<%= link_to 'Back', private_lessons_path %>

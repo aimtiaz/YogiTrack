@@ -1,0 +1,1 @@
+json.partial! "private_lessons/private_lesson", private_lesson: @private_lesson

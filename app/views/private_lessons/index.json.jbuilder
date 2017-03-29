@@ -1,0 +1,1 @@
+json.array! @private_lessons, partial: 'private_lessons/private_lesson', as: :private_lesson

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Program schedule:</strong>
+  <%= @program_roster.program_schedule_id %>
+</p>
+
+<p>
+  <strong>Customer:</strong>
+  <%= @program_roster.customer_id %>
+</p>
+
+<%= link_to 'Edit', edit_program_roster_path(@program_roster) %> |
+<%= link_to 'Back', program_rosters_path %>

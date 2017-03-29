@@ -1,0 +1,1 @@
+json.partial! "program_rosters/program_roster", program_roster: @program_roster

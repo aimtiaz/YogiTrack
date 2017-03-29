@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Equipment:</strong>
+  <%= @equipment_checkout.equipment_id %>
+</p>
+
+<p>
+  <strong>Checkout date:</strong>
+  <%= @equipment_checkout.checkout_date %>
+</p>
+
+<p>
+  <strong>Checkin date:</strong>
+  <%= @equipment_checkout.checkin_date %>
+</p>
+
+<p>
+  <strong>Equipment status:</strong>
+  <%= @equipment_checkout.equipment_status_id %>
+</p>
+
+<p>
+  <strong>Customer:</strong>
+  <%= @equipment_checkout.customer_id %>
+</p>
+
+<%= link_to 'Edit', edit_equipment_checkout_path(@equipment_checkout) %> |
+<%= link_to 'Back', equipment_checkouts_path %>

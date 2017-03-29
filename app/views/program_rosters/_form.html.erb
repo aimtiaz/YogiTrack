@@ -1,0 +1,25 @@
+<%= form_for(@program_roster) do |f| %>
+  <% if @program_roster.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@program_roster.errors.count, "error") %> prohibited this program_roster from being saved:</h2>
+
+      <ul>
+      <% @program_roster.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :program_schedule_id %><br>
+    <%= f.number_field :program_schedule_id %>
+  </div>
+  <div class="field">
+    <%= f.label :customer_id %><br>
+    <%= f.number_field :customer_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
