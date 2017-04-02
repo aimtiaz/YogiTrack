@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :private_lessons
   resources :equipment_checkouts
   resources :program_rosters
