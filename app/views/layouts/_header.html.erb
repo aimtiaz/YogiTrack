@@ -8,8 +8,6 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <%= link_to "<i classs='fa fa-circle-o-notch'></i>CFIS".html_safe, root_path, class:"navbar-brand" %>
-
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -17,15 +15,18 @@
 
       <ul class="nav navbar-nav navbar-right">
         <% if current_user %>
-            <li><%= link_to "New Report", report_path %></li>
-            <li><%= link_to "New Campaign Report", new_campaign_finance_info_path %></li>
-            <li><%= link_to "Settings", edit_user_registration_path %></li>
-            <li><%= link_to "Log Out", destroy_user_session_path, :method => :delete %></li>
+            <li><%= link_to "Class Schedule", new_classroom_path %></li>
+            <li><%= link_to "Clients", new_classroom_path %></li>
+            <li><%= link_to "Private Lessons", new_classroom_path %></li>
+            <li><%= link_to "Equipment Checkout", new_classroom_path %></li>
+            <li><%= link_to "New Campaign Report", new_classroom_path %></li>
+        <li><%= link_to "Settings", edit_user_registration_path %></li>
+        <li><%= link_to "Log Out", destroy_user_session_path, :method => :delete %></li>
 
 
         <% else %>
-            <li><%= link_to "Login", new_user_session_path %></li></ul>
+        <li><%= link_to "Login", new_user_session_path %></li></ul>
         <% end %>
-        </div><!-- /.navbar-collapse -->
+    </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
