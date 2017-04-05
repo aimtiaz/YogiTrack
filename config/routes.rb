@@ -1,4 +1,20 @@
 Rails.application.routes.draw do
+  get 'start/welcome'
+
+  get 'start/dashboard'
+
+  get 'info/about'
+
+  get 'info/schedule'
+
+  get 'info/pricing'
+
+  get 'info/private'
+
+  get 'info/event'
+
+  get 'info/contact'
+
   devise_for :users
   resources :private_lessons
   resources :equipment_checkouts
@@ -19,7 +35,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
   get '/users', to: redirect('/welcome/dasboard')
   # You can have the root of your site routed with "root"
-  root 'welcome#home'
+  root 'start#welcome'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
 
   #To redirect after the user signs in
   def after_sign_in_path_for(resource)
-    new_classroom_path
+    start_dashboard_path
   end
 
   #After user signs out
