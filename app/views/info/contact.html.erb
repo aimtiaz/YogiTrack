@@ -1,2 +1,179 @@
-<h1>Info#contact</h1>
-<p>Find me in app/views/info/contact.html.erb</p>
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+  <meta charset="UTF-8" />
+  <title>Joy Yoga Studio</title>
+  <link rel="profile" href="http://gmpg.org/xfn/11" />
+
+  <link rel="stylesheet" type="text/css" media="all" href="http://mokshayogastudio.com/wp-content/themes/yoga/style.css" />
+
+
+  <link rel="pingback" href="http://mokshayogastudio.com/xmlrpc.php" />
+  <link rel="alternate" type="application/rss+xml" title="Moksha Yoga Studio &raquo; Feed" href="http://mokshayogastudio.com/?feed=rss2" />
+  <link rel="alternate" type="application/rss+xml" title="Moksha Yoga Studio &raquo; Comments Feed" href="http://mokshayogastudio.com/?feed=comments-rss2" />
+  <link rel='stylesheet' id='wgpag-css'  href='http://mokshayogastudio.com/wp-content/plugins/widget-pagination/css/wgpag.css?ver=0.7.1' type='text/css' media='all' />
+  <link rel='stylesheet' id='popular-widget-css'  href='http://mokshayogastudio.com/wp-content/plugins/popular-widget/_css/pop-widget.css?ver=1.0.1' type='text/css' media='all' />
+  <link rel='stylesheet' id='wp-paginate-css'  href='http://mokshayogastudio.com/wp-content/plugins/wp-paginate/wp-paginate.css?ver=1.2.4' type='text/css' media='screen' />
+  <script type='text/javascript' src='http://mokshayogastudio.com/wp-includes/js/jquery/jquery.js?ver=1.7.1'></script>
+  <script type='text/javascript'>
+    /* <![CDATA[ */
+    var wgpag_options = [];
+    wgpag_options = {"widgets":[{"selector":".widget_links","count":0},{"selector":".widget_categories","count":0},{"selector":".widget_archive","count":0},{"selector":".widget_recent_entries","count":0},{"selector":".widget_recent_comments","count":0},{"selector":".widget_meta","count":0},{"selector":".widget_pages","count":0}],"pages_to_show":"<? echo get_option('wgpag-pag_option_ptsh') ? get_option('wgpag-pag_option_ptsh') : 7; ?>","prev_label":"<? echo get_option('wgpag-pag_option_prev') ? get_option('wgpag-pag_option_prev') : '<'; ?>","next_label":"<? echo get_option('wgpag-pag_option_next') ? get_option('wgpag-pag_option_next') : '>'; ?>","hor_align":"left"};
+    /* ]]> */
+  </script>
+  <script type='text/javascript' src='http://mokshayogastudio.com/wp-content/plugins/widget-pagination/js/wgpag.js?ver=0.7.1'></script>
+  <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://mokshayogastudio.com/xmlrpc.php?rsd" />
+  <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://mokshayogastudio.com/wp-includes/wlwmanifest.xml" />
+  <meta name="generator" content="WordPress 3.3.1" />
+  <script type="text/javascript">
+    //<![CDATA[
+    function newsletter_check(f) {
+      var re = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-]{1,})+\.)+([a-zA-Z0-9]{2,})+$/;
+      if (!re.test(f.elements["ne"].value)) {
+        alert("Your email seems wrong, check it please.");
+        return false;
+      }
+      if (f.elements["ny"] && !f.elements["ny"].checked) {
+        alert("You must accept the privacy informative to subscribe.");
+        return false;
+      }
+      return true;
+    }
+    //]]></script>
+  <style type="text/css">
+  </style>
+  <!-- Wordpress Popular Posts v2.2.1 -->
+  <link rel="stylesheet" href="http://mokshayogastudio.com/wp-content/plugins/wordpress-popular-posts/style/wpp.css" type="text/css" media="screen" />
+  <!-- End Wordpress Popular Posts v2.2.1 -->
+  <script type="text/javascript" src="http://mokshayogastudio.com/wp-content/themes/yoga/js/jquery-1.6.1.min.js"></script>
+  <script type="text/javascript" src="http://mokshayogastudio.com/wp-content/themes/yoga/js/jquery.nivo.slider.pack.js"></script>
+  <script type="text/javascript">
+    $(window).load(function() {
+      $('#slider').nivoSlider({
+        animSpeed: 500,
+        pauseTime: 3000
+      });
+    });
+  </script>
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body class="home blog">
+<div id="wrapper" class="hfeed">
+
+  <div class="container_12 height">
+    <div class="header grid_12"><a href="localhost:3000.com" title="Joy Yoga Studio" rel="home"><img src="assets/logo.png" alt="rss feed" /></a></div>
+  </div> <!-- End of container header -->
+
+  <div class="container100 nav">
+    <div class="container_12">
+      <div class="grid_12 menu">
+        <div class="menu-header"><ul id="menu-top_menu" class="menu"><li id="menu-item-286" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-286"></li>
+          <li id="menu-item-72" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-72"><%= link_to "About Us", info_about_path %></li>
+          <li id="menu-item-73" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-73"><%= link_to "Class Type & Schedule", info_schedule_path %></li>
+          <li id="menu-item-73" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-73"><%= link_to "Membership & Pricing", info_pricing_path %></li>
+          <li id="menu-item-74" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-74"><%= link_to "Private Yoga", info_private_path %></li>
+          <li id="menu-item-75" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75"><%= link_to "Events", info_event_path %></li>
+          <li id="menu-item-108" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-108"><%= link_to "Contact Us", info_contact_path %></li>
+        </ul></div>    </div>
+    </div>
+  </div> <!-- End of Container Menu -->
+
+
+  <div id="main">
+
+
+    <div class="container100 banner">
+      <div class="container_12">
+        <div id="wrapper" class="grid_12">
+          <div class="slider-wrapper theme-default">
+            <div class="ribbon"></div>
+            <div id="slider" class="nivoSlider">
+              <img src="http://cdn.phillymag.com/wp-content/uploads/2015/11/yoga-class.jpg"/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- End of container banner flash -->
+
+    <div class="container_12">
+      <div class="main">
+        <div class="grid_12 title">Contact Us</div>
+
+
+        <div id="" role="complementary">
+
+          <div id="" class="widget-area">
+            <ul style="">
+              <li id="categoryposts-9" class="widget-container widget_categoryposts"><h5 class="widget-title">What's New</h5><ul>
+                <li  class="grid_4 item1" style="display:inline;">
+                  <a style="text-decoration:none;font-size:18px; display:block; margin-bottom:10px; margin-top:10px; height:30px;" href="http://localhost:3000" rel="bookmark" title="Permanent link to Massage &amp; Release &#8211; Self-Massage Techniques to Erase Pain">Something  &#038; Here &#8211; Info</a><br/>
+                  <div id="item">
+                    <a href="http://localhost:3000" title="Massage &amp; Release &#8211; Self-Massage Techniques to Erase Pain">
+                      <img width="300" height="162" src="http://mokshayogastudio.com/wp-content/uploads/2017/01/Buttocks-massage-with-bent-leg-300x162.jpg" class="attachment-cat_post_thumb_sizecategoryposts-9 wp-post-image" alt="Buttocks massage with bent leg" title="Buttocks massage with bent leg" />				</a>
+
+                  </div>
+                  <p>More &#8211; Info &hellip;</p>
+
+
+                  <br/>
+                  <a href="http://localhost:3000">READ MORE</a>
+                </li>
+                <li  class="grid_4 item1" style="display:inline;">
+                  <a style="text-decoration:none;font-size:18px; display:block; margin-bottom:10px; margin-top:10px; height:30px;" href="http://localhost:3000" rel="bookmark" title="Permanent link to More &amp; Info">More &#038; Info</a><br/>
+                  <div id="item">
+                    <a href="http://localhost:3000" title="More &amp; Info">
+                      <img width="300" height="162" src="http://mokshayogastudio.com/wp-content/uploads/2016/08/Laguna-Vista-Room-1024x575-11-300x162.png" class="attachment-cat_post_thumb_sizecategoryposts-9 wp-post-image" alt="Laguna-Vista-Room-1024x575-1" title="Laguna-Vista-Room-1024x575-1" />				</a>
+
+                  </div>
+                  <p>More &amp; Info &hellip;</p>
+
+
+                  <br/>
+                  <a href="http://localhost:3000">READ MORE</a>
+                </li>
+                <li  class="grid_4 item1" style="display:inline;">
+                  <a style="text-decoration:none;font-size:18px; display:block; margin-bottom:10px; margin-top:10px; height:30px;" href="http://localhost:3000" rel="bookmark" title="Permanent link to More Info">More Info</a><br/>
+                  <div id="item">
+                    <a href="http://localhost:3000" title="More Info">
+                      <img width="300" height="162" src="http://mokshayogastudio.com/wp-content/uploads/2011/11/spa-face-skin-care-beauty-e1344290376743-300x162.jpg" class="attachment-cat_post_thumb_sizecategoryposts-9 wp-post-image" alt="spa-face-skin-care-beauty-e1344290376743" title="spa-face-skin-care-beauty-e1344290376743" />				</a>
+
+
+                  </div>
+                  <p>Info will go here</p>
+
+
+                  <br/>
+                  <a href="http://localhost:3000">READ MORE</a>
+                </li>
+              </ul>
+              </li>					</ul>
+          </div><!-- #first .widget-area -->
+
+        </div><!-- #footer-widget-area -->
+      </div>
+    </div>
+  </div><!-- #main -->
+
+  <div class="container100 line"></div>
+  <div class="container100 footer">
+    <div class="container_12">
+      <div class="subfooter">
+        <div class="grid_4 heightFooter"> <span>Contact Us</span>
+          <ul>
+            <li class="bg1">Phone: (713) 999-6921</li>
+            <li class="bg2"><a>info@joyyoga.com</a></li>
+            <li class="bg3">4500 Washington Avenue, Suite 900, Houston, TX 77007</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>  <!-- End of Container footer -->
+
+
+</div><!-- #wrapper -->
+
+</body>
+</html>

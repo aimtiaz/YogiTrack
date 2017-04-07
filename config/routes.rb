@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'classrooms/show'
+
+
   get 'start/welcome'
 
   get 'start/dashboard'

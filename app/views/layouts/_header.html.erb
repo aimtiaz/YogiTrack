@@ -15,10 +15,11 @@
 
       <ul class="nav navbar-nav navbar-right">
         <% if current_user %>
-            <li><%= link_to "Class Schedule", new_classroom_path %></li>
-            <li><%= link_to "Clients", new_classroom_path %></li>
-            <li><%= link_to "Private Lessons", new_classroom_path %></li>
-            <li><%= link_to "Equipment Checkout", new_classroom_path %></li>
+            <li><%= link_to "Home", start_dashboard_path %></li>
+            <li><%= link_to "Class Schedule", classrooms_path %></li>
+            <li><%= link_to "Clients", customers_path %></li>
+            <li><%= link_to "Private Lessons", private_lessons_path %></li>
+            <li><%= link_to "Equipment Checkout", new_equipment_checkout_path %></li>
             <li><%= link_to "New Classroon", new_classroom_path %></li>
         <li><%= link_to "Settings", edit_user_registration_path %></li>
         <li><%= link_to "Log Out", destroy_user_session_path, :method => :delete %></li>
