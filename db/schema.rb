@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170401211856) do
+ActiveRecord::Schema.define(version: 20170408172712) do
 
   create_table "classroom_statuses", force: :cascade do |t|
     t.string   "classroom_status", limit: 4000
@@ -37,6 +37,9 @@ ActiveRecord::Schema.define(version: 20170401211856) do
     t.datetime "created_at",                         null: false
     t.datetime "updated_at",                         null: false
     t.text     "health_concern",  limit: 2147483647
+    t.string   "birthdate",       limit: 4000
+    t.string   "ec_relationship", limit: 4000
+    t.boolean  "agree"
   end
 
   create_table "employees", force: :cascade do |t|
