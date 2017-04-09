@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170408172712) do
+ActiveRecord::Schema.define(version: 20170409025353) do
 
   create_table "classroom_statuses", force: :cascade do |t|
     t.string   "classroom_status", limit: 4000
@@ -63,8 +63,8 @@ ActiveRecord::Schema.define(version: 20170408172712) do
 
   create_table "equipment_checkouts", force: :cascade do |t|
     t.integer  "equipment_id",        limit: 4
-    t.date     "checkout_date"
-    t.date     "checkin_date"
+    t.datetime "checkout_date"
+    t.datetime "checkin_date"
     t.integer  "equipment_status_id", limit: 4
     t.integer  "customer_id",         limit: 4
     t.datetime "created_at",                    null: false
@@ -108,7 +108,7 @@ ActiveRecord::Schema.define(version: 20170408172712) do
   create_table "private_lessons", force: :cascade do |t|
     t.integer  "instructor_id", limit: 4
     t.integer  "customer_id",   limit: 4
-    t.date     "date"
+    t.datetime "date"
     t.time     "time",                             precision: 7
     t.string   "cost",          limit: 4000
     t.integer  "classroom_id",  limit: 4
@@ -127,13 +127,13 @@ ActiveRecord::Schema.define(version: 20170408172712) do
   create_table "program_schedules", force: :cascade do |t|
     t.integer  "program_id",    limit: 4
     t.integer  "instructor_id", limit: 4
-    t.date     "date"
-    t.time     "start_time",                 precision: 7
-    t.time     "end_time",                   precision: 7
+    t.datetime "date"
+    t.datetime "start"
+    t.datetime "end"
     t.integer  "classroom_id",  limit: 4
     t.string   "class_size",    limit: 4000
-    t.datetime "created_at",                               null: false
-    t.datetime "updated_at",                               null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
   end
 
   create_table "programs", force: :cascade do |t|
