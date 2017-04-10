@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :equipmeents
   resources :events
   get 'classrooms/show'
 
@@ -19,6 +20,11 @@ Rails.application.routes.draw do
 
   get 'info/contact'
 
+  get 'home/index'
+
+  match "home/data", :to => "home#data", :as => "data", :via => "get"
+  match "home/db_action", :to => "home#db_action", :as => "db_action", :via => "get"
+
   devise_for :users
   resources :private_lessons
   resources :equipment_checkouts
@@ -27,7 +33,7 @@ Rails.application.routes.draw do
   resources :employees
   resources :program_schedules
   resources :instructors
-  resources :equipment
+  resources :equipments
   resources :managers
   resources :classrooms
   resources :classroom_statuses

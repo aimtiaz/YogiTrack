@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170409025353) do
+ActiveRecord::Schema.define(version: 20170410014410) do
 
   create_table "classroom_statuses", force: :cascade do |t|
     t.string   "classroom_status", limit: 4000
@@ -53,6 +53,14 @@ ActiveRecord::Schema.define(version: 20170409025353) do
     t.datetime "updated_at",                      null: false
   end
 
+  create_table "equipmeents", force: :cascade do |t|
+    t.string   "eq_desc",             limit: 4000
+    t.string   "rental_price",        limit: 4000
+    t.integer  "equipment_status_id", limit: 4
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
+  end
+
   create_table "equipment", force: :cascade do |t|
     t.string   "equipment_description", limit: 4000
     t.string   "rental_price",          limit: 4000
@@ -62,7 +70,7 @@ ActiveRecord::Schema.define(version: 20170409025353) do
   end
 
   create_table "equipment_checkouts", force: :cascade do |t|
-    t.integer  "equipment_id",        limit: 4
+    t.integer  "equipmeent_id",       limit: 4
     t.datetime "checkout_date"
     t.datetime "checkin_date"
     t.integer  "equipment_status_id", limit: 4
@@ -75,6 +83,14 @@ ActiveRecord::Schema.define(version: 20170409025353) do
     t.string   "equipment_status", limit: 4000
     t.datetime "created_at",                    null: false
     t.datetime "updated_at",                    null: false
+  end
+
+  create_table "eventts", force: :cascade do |t|
+    t.datetime "start_date"
+    t.datetime "end_date"
+    t.string   "text",       limit: 4000
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
   end
 
   create_table "instructors", force: :cascade do |t|
