@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170410014410) do
+ActiveRecord::Schema.define(version: 20170412024609) do
 
   create_table "classroom_statuses", force: :cascade do |t|
     t.string   "classroom_status", limit: 4000
@@ -24,6 +24,16 @@ ActiveRecord::Schema.define(version: 20170410014410) do
     t.integer  "classroom_status_id",   limit: 4
     t.datetime "created_at",                         null: false
     t.datetime "updated_at",                         null: false
+  end
+
+  create_table "csearches", force: :cascade do |t|
+    t.string   "keywords",   limit: 4000
+    t.string   "first",      limit: 4000
+    t.string   "last",       limit: 4000
+    t.string   "phone",      limit: 4000
+    t.string   "email",      limit: 4000
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
   end
 
   create_table "customers", force: :cascade do |t|

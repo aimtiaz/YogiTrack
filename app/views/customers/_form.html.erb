@@ -11,35 +11,67 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :c_first_name %><br>
-    <%= f.text_field :c_first_name %>
-  </div>
-  <div class="field">
-    <%= f.label :c_last_name %><br>
-    <%= f.text_field :c_last_name %>
-  </div>
-  <div class="field">
-    <%= f.label :address %><br>
-    <%= f.text_area :address %>
-  </div>
-  <div class="field">
-    <%= f.label :phone %><br>
-    <%= f.text_field :phone %>
-  </div>
-  <div class="field">
-    <%= f.label :emergency_phone %><br>
-    <%= f.text_field :emergency_phone %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br>
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :membership_id %><br>
-    <%= f.number_field :membership_id %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+    <div class="panel panel-default">
+      <div class="panel-heading"><h4>New Client Form
+
+        <p id="demo"></p>
+      </h4>
+      </div>
+      <div class="panel-body">
+    <form>
+
+      <div class="field">
+        <%= f.label :c_first_name, "First Name", :class => 'control-label' %><br>
+        <%= f.text_field :c_first_name, :class => 'form-control' %><br>
+      </div>
+      <div class="field">
+        <%= f.label :c_last_name, "Last Name", :class => 'control-label' %><br>
+        <%= f.text_field :c_last_name, :class => 'form-control' %><br>
+      </div>
+      <div class="field">
+        <%= f.label :address, "Address", :class => 'control-label' %><br>
+        <%= f.text_area :address, :class => 'form-control' %><br>
+      </div>
+      <div class="field">
+        <%= f.label :phone, "Best Phone Number", :class => 'control-label' %><br>
+        <%= f.text_field :phone, :class => 'form-control' %><br>
+      </div>
+      <div class="field">
+        <%= f.label :emergency_phone, "Emergency Contact Number", :class => 'control-label' %><br>
+        <%= f.text_field :emergency_phone, :class => 'form-control' %><br>
+      </div>
+      <div class="field">
+        <%= f.label :ec_relationship, "Emergency Contact Relationship", :class => 'control-label' %><br>
+        <%= f.text_field :ec_relationship, :class => 'form-control' %><br>
+      </div>
+      <div class="field">
+        <%= f.label :email, "Email Address", :class => 'control-label' %><br>
+        <%= f.text_field :email, :class => 'form-control' %><br>
+      </div>
+      <div class="field">
+        <%= f.label :membership_id, "Please Select Membership", :class => 'control-label' %><br>
+        <%= f.number_field :membership_id, :class => 'form-control' %><br>
+      </div>
+      <div class="field">
+        <%= f.label :health_concern, "Please List Any Health Concerns We Should Be Aware Of:", :class => 'control-label' %><br>
+        <%= f.text_area :health_concern,:class => 'form-control' %><br>
+      </div>
+      <div class="field">
+        <%= f.label :agree, "Do you agree", :class => 'control-label' %><br>
+        <%= f.check_box :agree %><br>
+      </div>
+      <br>
+
+
+
+
+    </form>
+
+
+</div>
+</div>
+
+<div class="actions">
+  <%= f.submit %>
+</div>
 <% end %>

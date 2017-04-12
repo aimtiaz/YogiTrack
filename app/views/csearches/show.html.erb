@@ -1,0 +1,27 @@
+<h1>Search Results</h1>
+
+<p><%= link_to 'Back', new_csearch_path %></p>
+
+<% if @csearch.csearch_customers.empty? %>
+
+  <p>No Records Found</p>
+
+<% else %>
+
+  <% @csearch.csearch_customers.each do |cs| %>
+  <br>
+
+  <div class="div">
+    <h1><%= cs.c_first_name %></h1>
+    <h1><%= cs.c_last_name %></h1>
+    <p>Address: <%= cs.address %></p>
+    <p>Phone: <%= cs.phone %></p>
+    <p>Email: <%= cs.email %></p>
+    <p>Emergency Contact Number: <%= cs.emergency_phone %></p>
+    <p>Membership Type: <%= cs.membership_id %></p>
+    <p>Health Concerns: <%= cs.health_concern %></p>
+  </div>
+
+<% end %>
+
+<% end %>

@@ -1,0 +1,29 @@
+<h1>Advanced Search</h1>
+
+<%= form_for @csearch, html: {class: "pure-form"} do |c| %>
+
+    <div class="field">
+      <%= c.label :keywords %><br />
+      <%= c.text_field :keywords %>
+    </div>
+    <div class="field">
+      <%= c.label :first %><br />
+      <%= c.text_field :first %>
+    </div>
+    <div class="field">
+      <%= c.label :last %><br />
+      <%= c.text_field :last %>
+    </div>
+    <div class="field">
+      <%= c.label :phone %><br />
+      <%= c.text_field :phone %>
+    </div>
+    <div class="field">
+      <%= c.label :email %><br />
+      <%= c.text_field :email %>
+    </div>
+
+    <div class="actions"><%= c.submit "Search", class: "pure-button pure-button-primary" %></div>
+  <% end %>
+
+<p><%= link_to 'Back', customers_path %></p>
