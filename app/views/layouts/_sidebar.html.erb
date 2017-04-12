@@ -1,0 +1,196 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-3 col-md-3">
+      <div class="panel-group" id="accordion">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><span class="glyphicon glyphicon-user">
+                            </span> Clients</a>
+            </h4>
+          </div>
+          <div id="collapseOne" class="panel-collapse collapse in">
+            <div class="panel-body">
+              <table class="table">
+                <tr>
+                  <td>
+                    <%= link_to "View Clients", customers_path %>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <%= link_to "Add New Client", new_customer_path %>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"><span class="glyphicon glyphicon-calendar">
+                            </span>Classes</a>
+            </h4>
+          </div>
+          <div id="collapseTwo" class="panel-collapse collapse">
+            <div class="panel-body">
+              <table class="table">
+                <tr>
+                  <td>
+                    <%= link_to "View Class Schedule", program_schedules_path %>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <%= link_to "Class Enrollment", program_rosters_path %>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <%= link_to "Add New Class", new_program_schedule_path %>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree"><span class="glyphicon glyphicon-calendar">
+                            </span>Private Lessons</a>
+            </h4>
+          </div>
+          <div id="collapseThree" class="panel-collapse collapse">
+            <div class="panel-body">
+              <table class="table">
+                <tr>
+                  <td>
+                    <%= link_to "View Private Lessons", private_lessons_path %>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <%= link_to "Add New Private Lesson", new_private_lesson_path %>
+                  </td>
+                </tr>
+                <tr>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour"><span class="glyphicon glyphicon-credit-card">
+                            </span>Equipment Checkout</a>
+            </h4>
+          </div>
+          <div id="collapseFour" class="panel-collapse collapse">
+            <div class="panel-body">
+              <table class="table">
+                <tr>
+                  <td>
+                    <%= link_to "Equipments", new_equipment_path %>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="http://www.jquery2dotnet.com">Add New Client</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="http://www.jquery2dotnet.com">Shipments</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="http://www.jquery2dotnet.com">Tex</a>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive"><span class="glyphicon glyphicon-user">
+                            </span>Employees</a>
+            </h4>
+          </div>
+          <div id="collapseFive" class="panel-collapse collapse">
+            <div class="panel-body">
+              <table class="table">
+                <tr>
+                  <td>
+                    <a href="http://www.jquery2dotnet.com">View Employees</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="http://www.jquery2dotnet.com">Add New Employee</a> <span class="label label-info">5</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="http://www.jquery2dotnet.com">Import/Export</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="glyphicon glyphicon-trash text-danger"></span><a href="http://www.jquery2dotnet.com" class="text-danger">
+                    Delete Account</a>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapseSix"><span class="glyphicon glyphicon-file">
+                            </span>Reports</a>
+            </h4>
+          </div>
+          <div id="collapseSix" class="panel-collapse collapse">
+            <div class="panel-body">
+              <table class="table">
+                <tr>
+                  <td>
+                    <span class="glyphicon glyphicon-usd"></span><a href="http://www.jquery2dotnet.com">Class Attendance</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="glyphicon glyphicon-user"></span><a href="http://www.jquery2dotnet.com">Customers</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="glyphicon glyphicon-tasks"></span><a href="http://www.jquery2dotnet.com">Products</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="glyphicon glyphicon-shopping-cart"></span><a href="http://www.jquery2dotnet.com">Shopping Cart</a>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-9 col-md-9">
+      <div class="col-md-12">
+
+        <!--/panel-->
+
+      </div>
+    </div>
+  </div>
+</div>

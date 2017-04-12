@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  eq_desc: MyString
+  rental_price: MyString
+  equipment_status_id: 1
+
+two:
+  eq_desc: MyString
+  rental_price: MyString
+  equipment_status_id: 1

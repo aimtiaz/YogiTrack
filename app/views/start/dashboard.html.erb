@@ -45,7 +45,7 @@
                 </tr>
                 <tr>
                   <td>
-                    <%= link_to "Class Enrollment", program_rosters_path %>
+                    <%= link_to "Enroll Students", new_program_roster_path %>
                   </td>
                 </tr>
                 <tr>
@@ -94,22 +94,17 @@
               <table class="table">
                 <tr>
                   <td>
-                    <%= link_to "Equipments", new_equipment_path %>
+                    <%= link_to "View All Equipments", equipmeents_path %>
                   </td>
                 </tr>
                 <tr>
                   <td>
-                    <a href="http://www.jquery2dotnet.com">Add New Client</a>
+                    <%= link_to "New Equipment Checkout", new_equipment_checkout_path %>
                   </td>
                 </tr>
                 <tr>
                   <td>
-                    <a href="http://www.jquery2dotnet.com">Shipments</a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <a href="http://www.jquery2dotnet.com">Tex</a>
+                    <%= link_to "Equipments Checked Out", equipment_checkouts_path %>
                   </td>
                 </tr>
               </table>
@@ -120,7 +115,7 @@
           <div class="panel-heading">
             <h4 class="panel-title">
               <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive"><span class="glyphicon glyphicon-user">
-                            </span>Employees</a>
+                            </span>All Employees</a>
             </h4>
           </div>
           <div id="collapseFive" class="panel-collapse collapse">
@@ -128,23 +123,32 @@
               <table class="table">
                 <tr>
                   <td>
-                    <a href="http://www.jquery2dotnet.com">View Employees</a>
+                    <%= link_to "View Employees", employees_path %>
                   </td>
                 </tr>
                 <tr>
                   <td>
-                    <a href="http://www.jquery2dotnet.com">Add New Employee</a> <span class="label label-info">5</span>
+                    <%= link_to "View Instructors", instructors_path %>
                   </td>
                 </tr>
                 <tr>
                   <td>
-                    <a href="http://www.jquery2dotnet.com">Import/Export</a>
+                    <%= link_to "View Managers", managers_path %>
                   </td>
                 </tr>
                 <tr>
                   <td>
-                    <span class="glyphicon glyphicon-trash text-danger"></span><a href="http://www.jquery2dotnet.com" class="text-danger">
-                    Delete Account</a>
+                    <%= link_to "New Employee", new_employee_path %>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <%= link_to "New Instructor", new_instructor_path %>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <%= link_to "New Manager", new_manager_path %>
                   </td>
                 </tr>
               </table>
@@ -163,22 +167,22 @@
               <table class="table">
                 <tr>
                   <td>
-                    <span class="glyphicon glyphicon-usd"></span><a href="http://www.jquery2dotnet.com">Class Attendance</a>
+                    <%= link_to "Class Enrollment", program_rosters_path %>
                   </td>
                 </tr>
                 <tr>
                   <td>
-                    <span class="glyphicon glyphicon-user"></span><a href="http://www.jquery2dotnet.com">Customers</a>
+                    <%= link_to "Equipments", new_equipment_path %>
                   </td>
                 </tr>
                 <tr>
                   <td>
-                    <span class="glyphicon glyphicon-tasks"></span><a href="http://www.jquery2dotnet.com">Products</a>
+                    <%= link_to "Equipments", new_equipment_path %>
                   </td>
                 </tr>
                 <tr>
                   <td>
-                    <span class="glyphicon glyphicon-shopping-cart"></span><a href="http://www.jquery2dotnet.com">Shopping Cart</a>
+                    <%= link_to "Equipments", new_equipment_path %>
                   </td>
                 </tr>
               </table>

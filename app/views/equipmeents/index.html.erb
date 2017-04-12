@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Equipmeents</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Eq desc</th>
+      <th>Rental price</th>
+      <th>Equipment status</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @equipmeents.each do |equipmeent| %>
+      <tr>
+        <td><%= equipmeent.eq_desc %></td>
+        <td><%= equipmeent.rental_price %></td>
+        <td><%= equipmeent.equipment_status_id %></td>
+        <td><%= link_to 'Show', equipmeent %></td>
+        <td><%= link_to 'Edit', edit_equipmeent_path(equipmeent) %></td>
+        <td><%= link_to 'Destroy', equipmeent, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Equipmeent', new_equipmeent_path %>

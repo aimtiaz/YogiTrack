@@ -1,3 +1,3 @@
 class EquipmentStatus < ActiveRecord::Base
-  has_many :equipments
+  has_many :equipmeents
 end
