@@ -11,35 +11,55 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :instructor_id %><br>
-    <%= f.number_field :instructor_id %>
-  </div>
-  <div class="field">
-    <%= f.label :customer_id %><br>
-    <%= f.number_field :customer_id %>
-  </div>
-  <div class="field">
-    <%= f.label :date %><br>
-    <%= f.date_select :date %>
-  </div>
-  <div class="field">
-    <%= f.label :time %><br>
-    <%= f.time_select :time %>
-  </div>
-  <div class="field">
-    <%= f.label :cost %><br>
-    <%= f.text_field :cost %>
-  </div>
-  <div class="field">
-    <%= f.label :classroom_id %><br>
-    <%= f.number_field :classroom_id %>
-  </div>
-  <div class="field">
-    <%= f.label :comments %><br>
-    <%= f.text_area :comments %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading"><h4>New Private Lesson Form
+
+        <p id="demo"></p>
+      </h4>
+      </div>
+      <div class="panel-body">
+        <form>
+
+          <div class="field">
+            <%= f.label :instructor_id, "Instructor", :class => 'control-label' %><br>
+            <%= f.number_field :instructor_id, :class => 'form-control' %><br>
+          </div>
+          <div class="field">
+            <%= f.label :customer_id, "Customer", :class => 'control-label' %><br>
+            <%= f.number_field :customer_id, :class => 'form-control' %><br>
+          </div>
+          <div class="field">
+            <%= f.label :date, "Date", :class => 'control-label' %><br>
+            <%= f.date_select :date, :class => 'form-control' %><br>
+          </div>
+          <div class="field">
+            <%= f.label :time, "Time", :class => 'control-label' %><br>
+            <%= f.time_select :time, :class => 'form-control' %><br>
+          </div>
+          <div class="field">
+            <%= f.label :cost, "Cost", :class => 'control-label' %><br>
+            <%= f.text_field :cost, :class => 'form-control' %><br>
+          </div>
+          <div class="field">
+            <%= f.label :classroom_id, "Classroom", :class => 'control-label' %><br>
+            <%= f.number_field :classroom_id, :class => 'form-control' %><br>
+          </div>
+          <div class="field">
+            <%= f.label :comments, "Comments", :class => 'control-label' %><br>
+            <%= f.text_area :comments, :class => 'form-control' %><br>
+          </div>
+          <div class="actions">
+            <%= f.submit %>
+          </div>
 <% end %>
+<br>
+
+
+
+
+</form>
+
+
+</div>
+</div>

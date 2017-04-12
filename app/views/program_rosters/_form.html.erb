@@ -11,15 +11,33 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :program_schedule_id %><br>
-    <%= f.number_field :program_schedule_id %>
-  </div>
-  <div class="field">
-    <%= f.label :customer_id %><br>
-    <%= f.number_field :customer_id %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading"><h4>Enroll Clients Into Class(s)
+
+        <p id="demo"></p>
+      </h4>
+      </div>
+      <div class="panel-body">
+        <form>
+
+          <div class="field">
+            <%= f.label :program_schedule_id, "Select Class", :class => 'control-label' %><br>
+            <%= f.number_field :program_schedule_id, :class => 'form-control' %><br>
+          </div>
+          <div class="field">
+            <%= f.label :customer_id, "Select Client", :class => 'control-label' %><br>
+            <%= f.number_field :customer_id, :class => 'form-control' %><br>
+          </div>
+          <div class="actions">
+            <%= f.submit %>
+          </div>
 <% end %>
+<br>
+
+
+</form>
+
+
+</div>
+</div>

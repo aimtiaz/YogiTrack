@@ -11,27 +11,47 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :equipment_id %><br>
-    <%= f.number_field :equipmeent_id %>
-  </div>
-  <div class="field">
-    <%= f.label :checkout_date %><br>
-    <%= f.date_select :checkout_date %>
-  </div>
-  <div class="field">
-    <%= f.label :checkin_date %><br>
-    <%= f.date_select :checkin_date %>
-  </div>
-  <div class="field">
-    <%= f.label :equipment_status_id %><br>
-    <%= f.number_field :equipment_status_id %>
-  </div>
-  <div class="field">
-    <%= f.label :customer_id %><br>
-    <%= f.number_field :customer_id %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+    <div class="panel panel-default">
+      <div class="panel-heading"><h4>New Equipment Checkout Form
+
+        <p id="demo"></p>
+      </h4>
+      </div>
+      <div class="panel-body">
+        <form>
+
+          <div class="field">
+            <%= f.label :equipmeent_id, "Select an Equipment", :class => 'control-label' %><br>
+            <%= f.number_field :equipmeent_id, :class => 'form-control' %><br>
+          </div>
+          <div class="field">
+            <%= f.label :customer_id, "Select Client", :class => 'control-label' %><br>
+            <%= f.number_field :customer_id, :class => 'form-control' %><br>
+          </div>
+          <div class="field">
+            <%= f.label :checkout_date, "Check-Out Date", :class => 'control-label' %><br>
+            <%= f.date_select :checkout_date, :class => 'form-control' %><br>
+          </div>
+          <div class="field">
+            <%= f.label :checkin_date, "Check-In Date", :class => 'control-label' %><br>
+            <%= f.date_select :checkin_date, :class => 'form-control' %><br>
+          </div>
+          <div class="field">
+            <%= f.label :equipment_status_id, "Status", :class => 'control-label' %><br>
+            <%= f.number_field :equipment_status_id %><br>
+          </div><br>
+          <div class="actions">
+            <%= f.submit %>
+          </div>
 <% end %>
+<br>
+
+
+
+
+</form>
+
+
+</div>
+</div>
+

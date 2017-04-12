@@ -10,36 +10,53 @@
       </ul>
     </div>
   <% end %>
+    <div class="panel panel-default">
+      <div class="panel-heading"><h4>New Class Schedule
 
-  <div class="field">
-    <%= f.label :program_id %><br>
-    <%= f.number_field :program_id %>
-  </div>
-  <div class="field">
-    <%= f.label :instructor_id %><br>
-    <%= f.number_field :instructor_id %>
-  </div>
-  <div class="field">
-    <%= f.label :date %><br>
-    <%= f.text_field :date %>
-  </div>
-  <div class="field">
-    <%= f.label :start %><br>
-    <%= f.time_select :start %>
-  </div>
-  <div class="field">
-    <%= f.label :end %><br>
-    <%= f.time_select :end %>
-  </div>
-  <div class="field">
-    <%= f.label :classroom_id %><br>
-    <%= f.number_field :classroom_id %>
-  </div>
-  <div class="field">
-    <%= f.label :class_size %><br>
-    <%= f.text_field :class_size %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+        <p id="demo"></p>
+      </h4>
+      </div>
+      <div class="panel-body">
+        <form>
+
+          <div class="field">
+            <%= f.label :program_id, "Select Class Type", :class => 'control-label' %><br>
+            <%= f.number_field :program_id, :class => 'form-control' %><br>
+          </div>
+          <div class="field">
+            <%= f.label :instructor_id, "Instructor", :class => 'control-label' %><br>
+            <%= f.number_field :instructor_id, :class => 'form-control' %><br>
+          </div>
+          <div class="field">
+            <%= f.label :date, "Date", :class => 'control-label' %><br>
+            <%= f.text_field :date, :class => 'form-control' %><br>
+          </div>
+          <div class="field">
+            <%= f.label :start, "Start Time", :class => 'control-label' %><br>
+            <%= f.time_select :start, :class => 'form-control' %><br>
+          </div>
+          <div class="field">
+            <%= f.label :end, "End Time", :class => 'control-label' %><br>
+            <%= f.time_select :end, :class => 'form-control' %><br>
+          </div>
+          <div class="field">
+            <%= f.label :class_size, "Class Size", :class => 'control-label' %><br>
+            <%= f.text_field :class_size, :class => 'form-control' %><br>
+          </div>
+          <div class="field">
+            <%= f.label :classroom_id, "Classroom", :class => 'control-label' %><br>
+            <%= f.number_field :classroom_id, :class => 'form-control' %><br>
+          </div>
+          <div class="actions">
+            <%= f.submit %>
+          </div>
 <% end %>
+<br>
+
+
+</form>
+
+
+</div>
+</div>
+

@@ -10,32 +10,50 @@
       </ul>
     </div>
   <% end %>
+    <div class="panel panel-default">
+      <div class="panel-heading"><h4>New Employee Form
 
-  <div class="field">
-    <%= f.label :e_first_name %><br>
-    <%= f.text_field :e_first_name %>
-  </div>
-  <div class="field">
-    <%= f.label :e_last_name %><br>
-    <%= f.text_field :e_last_name %>
-  </div>
-  <div class="field">
-    <%= f.label :address %><br>
-    <%= f.text_area :address %>
-  </div>
-  <div class="field">
-    <%= f.label :phone %><br>
-    <%= f.text_field :phone %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br>
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :manager_id %><br>
-    <%= f.number_field :manager_id %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+        <p id="demo"></p>
+      </h4>
+      </div>
+      <div class="panel-body">
+        <form>
+
+          <div class="field">
+            <%= f.label :e_first_name, "First Name", :class => 'control-label' %><br>
+            <%= f.text_field :e_first_name, :class => 'form-control' %><br>
+          </div>
+          <div class="field">
+            <%= f.label :e_last_name, "Last Name", :class => 'control-label' %><br>
+            <%= f.text_field :e_last_name, :class => 'form-control' %><br>
+          </div>
+          <div class="field">
+            <%= f.label :address, "Address", :class => 'control-label' %><br>
+            <%= f.text_area :address, :class => 'form-control' %><br>
+          </div>
+          <div class="field">
+            <%= f.label :phone, "Best Phone Number", :class => 'control-label' %><br>
+            <%= f.text_field :phone, :class => 'form-control' %><br>
+          </div>
+          <div class="field">
+            <%= f.label :email, "Email Address", :class => 'control-label' %><br>
+            <%= f.text_field :email, :class => 'form-control' %><br>
+          </div>
+          <div class="field">
+            <%= f.label :manager_id, "Manager", :class => 'control-label' %><br>
+            <%= f.number_field :manager_id, :class => 'form-control' %><br>
+          </div>
+          <div class="actions">
+            <%= f.submit %>
+          </div>
 <% end %>
+<br>
+
+
+
+
+</form>
+
+
+</div>
+</div>
