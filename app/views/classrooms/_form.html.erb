@@ -17,7 +17,7 @@
   </div>
   <div class="field">
     <%= f.label :classroom_status_id %><br>
-    <%= f.number_field :classroom_status_id %>
+    <%= f.collection_select :classroom_status_id, ClassroomStatus.all, :id, :classroom_status, { prompt: "Select" }, :class => 'form-control' %><br>
   </div>
   <div class="actions">
     <%= f.submit %>

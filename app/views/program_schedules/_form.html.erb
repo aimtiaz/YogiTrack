@@ -21,15 +21,15 @@
 
           <div class="field">
             <%= f.label :program_id, "Select Class Type", :class => 'control-label' %><br>
-            <%= f.number_field :program_id, :class => 'form-control' %><br>
+            <%= f.collection_select :program_id, Program.all, :id, :program_description, { prompt: "Select" }, :class => 'form-control' %><br>
           </div>
           <div class="field">
             <%= f.label :instructor_id, "Instructor", :class => 'control-label' %><br>
-            <%= f.number_field :instructor_id, :class => 'form-control' %><br>
+            <%= collection_select :program_schedule, :instructor_id, Instructor.all.collect { |f| [ f.id, "#{f.i_first_name} #{f.i_last_name}" ] }, :first, :last, { prompt: "Select" }, :class => 'form-control' %><br>
           </div>
           <div class="field">
             <%= f.label :date, "Date", :class => 'control-label' %><br>
-            <%= f.text_field :date, :class => 'form-control' %><br>
+            <%= f.date_select :date, :class => 'form-control' %><br>
           </div>
           <div class="field">
             <%= f.label :start, "Start Time", :class => 'control-label' %><br>
@@ -45,7 +45,7 @@
           </div>
           <div class="field">
             <%= f.label :classroom_id, "Classroom", :class => 'control-label' %><br>
-            <%= f.number_field :classroom_id, :class => 'form-control' %><br>
+            <%= f.collection_select :classroom_id, Classroom.all, :id, :classroom_description, { prompt: "Select" }, :class => 'form-control' %><br>
           </div>
           <div class="actions">
             <%= f.submit %>

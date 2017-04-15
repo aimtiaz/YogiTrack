@@ -2,27 +2,27 @@
 
 <p>
   <strong>Program:</strong>
-  <%= @program_schedule.program_id %>
+  <%= @program_schedule.program.program_description rescue "" %>
 </p>
 
 <p>
   <strong>Instructor:</strong>
-  <%= @program_schedule.instructor_id %>
+  <%= @program_schedule.instructor.instructor_full_name rescue "" %>
 </p>
 
 <p>
   <strong>Date:</strong>
-  <%= @program_schedule.date %>
+  <%= @program_schedule.date.strftime("%A, %m/%d/%Y") rescue "" %>
 </p>
 
 <p>
   <strong>Start time:</strong>
-  <%= @program_schedule.start %>
+  <%= @program_schedule.start.strftime("%I:%M%p") rescue "" %>
 </p>
 
 <p>
   <strong>End time:</strong>
-  <%= @program_schedule.end %>
+  <%= @program_schedule.end.strftime("%I:%M%p") rescue "" %>
 </p>
 
 <p>

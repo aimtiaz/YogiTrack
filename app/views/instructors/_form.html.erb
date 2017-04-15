@@ -41,7 +41,7 @@
           </div>
           <div class="field">
             <%= f.label :manager_id, "Manager", :class => 'control-label' %><br>
-            <%= f.number_field :manager_id, :class => 'form-control' %><br>
+            <%= collection_select :instructor, :manager_id, Manager.all.collect { |f| [ f.id, "#{f.m_first_name} #{f.m_last_name}" ] }, :first, :last, { prompt: "Select" }, :class => 'form-control' %><br>
           </div>
           <div class="actions">
             <%= f.submit %>

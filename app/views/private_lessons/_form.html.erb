@@ -23,11 +23,11 @@
 
           <div class="field">
             <%= f.label :instructor_id, "Instructor", :class => 'control-label' %><br>
-            <%= f.number_field :instructor_id, :class => 'form-control' %><br>
+            <%= collection_select :private_lesson, :instructor_id, Instructor.all.collect { |f| [ f.id, "#{f.i_first_name} #{f.i_last_name}" ] }, :first, :last, { prompt: "Select" }, :class => 'form-control' %><br>
           </div>
           <div class="field">
             <%= f.label :customer_id, "Customer", :class => 'control-label' %><br>
-            <%= f.number_field :customer_id, :class => 'form-control' %><br>
+            <%= collection_select :private_lesson, :customer_id, Customer.all.collect { |f| [ f.id, "#{f.c_first_name} #{f.c_last_name}" ] }, :first, :last, { prompt: "Select" }, :class => 'form-control' %><br>
           </div>
           <div class="field">
             <%= f.label :date, "Date", :class => 'control-label' %><br>
@@ -43,7 +43,7 @@
           </div>
           <div class="field">
             <%= f.label :classroom_id, "Classroom", :class => 'control-label' %><br>
-            <%= f.number_field :classroom_id, :class => 'form-control' %><br>
+            <%= f.collection_select :classroom_id, Classroom.all, :id, :classroom_description, { prompt: "Select" }, :class => 'form-control' %><br>
           </div>
           <div class="field">
             <%= f.label :comments, "Comments", :class => 'control-label' %><br>

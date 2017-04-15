@@ -11,4 +11,9 @@ class Customer < ActiveRecord::Base
       all
     end
   end
+
+
+  def customer_full_name
+    "#{self.c_first_name} #{self.c_last_name}".split.map(&:capitalize).join(' ')
+  end
 end

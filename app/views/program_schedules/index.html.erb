@@ -17,7 +17,7 @@
     <% @program_schedules.each do |program_schedule| %>
       <tr>
         <td><%= program_schedule.program_id %></td>
-        <td><%= program_schedule.instructor_id %></td>
+        <td><%= program_schedule.instructor.instructor_full_name %></td>
         <td><%= program_schedule.date %></td>
         <td><%= program_schedule.start %></td>
         <td><%= program_schedule.end %></td>

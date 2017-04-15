@@ -50,7 +50,7 @@
       </div>
       <div class="field">
         <%= f.label :membership_id, "Please Select Membership", :class => 'control-label' %><br>
-        <%= f.number_field :membership_id, :class => 'form-control' %><br>
+        <%= f.collection_select :membership_id, Membership.all, :id, :membership_description, { prompt: "Select" }, :class => 'form-control' %><br>
       </div>
       <div class="field">
         <%= f.label :health_concern, "Please List Any Health Concerns We Should Be Aware Of:", :class => 'control-label' %><br>

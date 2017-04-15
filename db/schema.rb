@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170412024609) do
+ActiveRecord::Schema.define(version: 20170415011149) do
 
   create_table "classroom_statuses", force: :cascade do |t|
     t.string   "classroom_status", limit: 4000
@@ -154,12 +154,12 @@ ActiveRecord::Schema.define(version: 20170412024609) do
     t.integer  "program_id",    limit: 4
     t.integer  "instructor_id", limit: 4
     t.datetime "date"
-    t.datetime "start"
-    t.datetime "end"
+    t.time     "start",                      precision: 7
+    t.time     "end",                        precision: 7
     t.integer  "classroom_id",  limit: 4
     t.string   "class_size",    limit: 4000
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
+    t.datetime "created_at",                               null: false
+    t.datetime "updated_at",                               null: false
   end
 
   create_table "programs", force: :cascade do |t|
