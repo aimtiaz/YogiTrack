@@ -1,39 +1,85 @@
 <p id="notice"><%= notice %></p>
+<h1>
+  Client: <%= @customer.customer_full_name%>'s Profile
+</h1>
 
-<p>
-  <strong>C first name:</strong>
-  <%= @customer.c_first_name %>
-</p>
+<div class="top_container">
+  <div class="col-md-12 top_container btn-group">
+    <a href="" class="btn btn-default">Add new...</a>
+    <%= link_to 'Equipment', new_equipment_checkout_path(:customer_id => @customer.id),:class=>"btn btn-success"  %>
+    <%= link_to 'Class', new_program_roster_path(:customer_id => @customer.id), :class=>"btn btn-success" %>
+  </div>
+  <hr><br><br><br>
 
-<p>
-  <strong>C last name:</strong>
-  <%= @customer.c_last_name %>
-</p>
+  <div class="panel-group">
+    <div class="col-md-4">
+      <div class="panel panel-default">
+        <div class="panel-heading click_show_important">Client's Information
+        </div>
+        <div class="panel-body  important_section">
 
-<p>
-  <strong>Address:</strong>
-  <%= @customer.address %>
-</p>
+          <p>
+            <strong>First Name:</strong>
+            <%= @customer.c_first_name %>
+          </p>
 
-<p>
-  <strong>Phone:</strong>
-  <%= @customer.phone %>
-</p>
+          <p>
+            <strong>Last Name:</strong>
+            <%= @customer.c_last_name %>
+          </p>
+          <p>
+            <strong>DOB:</strong>
+            <%= @customer.birthdate %>
+          </p>
 
-<p>
-  <strong>Emergency phone:</strong>
-  <%= @customer.emergency_phone %>
-</p>
 
-<p>
-  <strong>Email:</strong>
-  <%= @customer.email %>
-</p>
+          <p>
+            <strong>Address:</strong>
+            <%= @customer.address %>
+          </p>
 
-<p>
-  <strong>Membership:</strong>
-  <%= @customer.membership_id %>
-</p>
+          <p>
+            <strong>Phone:</strong>
+            <%= @customer.phone %>
+          </p>
+          <p>
+            <strong>Email:</strong>
+            <%= @customer.email %>
+          </p>
+          <p>
+          <p>
+            <strong>Emergency Contact:</strong>
+            <%= @customer.ec_relationship %>
+          </p>
+            <strong>Emergency Contact Phone:</strong>
+            <%= @customer.emergency_phone %>
+          </p>
+          </p>
+          <strong>Health Concerns:</strong>
+          <%= @customer.health_concern %>
+          </p>
+          <p>
+            <strong>Membership:</strong>
+            <%= @customer.membership.membership_description %>
+          </p>
+        </div>
+      </div>
+    </div>
 
-<%= link_to 'Edit', edit_customer_path(@customer) %> |
-<%= link_to 'Back', customers_path %>
+
+
+
+
+
+
+
+
+
+  <div class="col-md-12 ">
+    <br><br>
+    <%= link_to 'Back', :back, :class => "btn btn-default" %>
+  </div>
+
+
+</div>
+</div>

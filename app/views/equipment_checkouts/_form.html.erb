@@ -22,7 +22,7 @@
 
           <div class="field">
             <%= f.label :equipmeent_id, "Select an Equipment", :class => 'control-label' %><br>
-            <%= f.collection_select :equipmeent_id, Equipmeent.all, :id, :eq_desc, { prompt: "Select" }, :class => 'form-control' %><br>
+            <%= f.collection_select (:equipmeent_id, Equipmeent.where.(equipment_status_id == "1"), :id, :eq_desc, { prompt: "Select" }, :class => 'form-control' )%><br>
           </div>
           <div class="field">
             <%= f.label :customer_id, "Select Client", :class => 'control-label' %><br>
