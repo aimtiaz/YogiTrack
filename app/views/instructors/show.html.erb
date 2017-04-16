@@ -1,34 +1,59 @@
 <p id="notice"><%= notice %></p>
+<h1>
+  <%= @instructor.instructor_full_name rescue "" %>'s Profile
+</h1>
 
-<p>
-  <strong>I first name:</strong>
-  <%= @instructor.i_first_name %>
-</p>
+<div class="top_container">
+  <hr><br><br><br>
 
-<p>
-  <strong>I last name:</strong>
-  <%= @instructor.i_last_name %>
-</p>
+  <div class="panel-group">
+    <div class="col-md-4">
+      <div class="panel panel-default">
+        <div class="panel-heading click_show_important">Instructor's Information
+        </div>
+        <div class="panel-body  important_section">
 
-<p>
-  <strong>Address:</strong>
-  <%= @instructor.address %>
-</p>
+          <p>
+            <strong>First Name:</strong>
+            <%= @instructor.i_first_name %>
+          </p>
 
-<p>
-  <strong>Phone:</strong>
-  <%= @instructor.phone %>
-</p>
+          <p>
+            <strong>Last Name:</strong>
+            <%= @instructor.i_last_name %>
+          </p>
 
-<p>
-  <strong>Email:</strong>
-  <%= @instructor.email %>
-</p>
+          <p>
+            <strong>Address:</strong>
+            <%= @instructor.address %>
+          </p>
 
-<p>
-  <strong>Manager:</strong>
-  <%= @instructor.manager_id %>
-</p>
+          <p>
+            <strong>Phone:</strong>
+            <%= @instructor.phone %>
+          </p>
 
-<%= link_to 'Edit', edit_instructor_path(@instructor) %> |
-<%= link_to 'Back', instructors_path %>
+          <p>
+            <strong>Email:</strong>
+            <%= @instructor.email %>
+          </p>
+
+          <p>
+            <strong>Manager:</strong>
+            <%= @instructor.manager.manager_full_name rescue "" %>
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="col-md-12 ">
+      <br><br>
+      <%= link_to 'Edit', edit_instructor_path(@instructor), :class => "btn btn-default" %> |
+      <%= link_to 'Back', instructors_path, :class => "btn btn-default" %>
+    </div>
+
+
+  </div>
+</div>

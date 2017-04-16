@@ -1,34 +1,59 @@
 <p id="notice"><%= notice %></p>
+<h1>
+  <%= @employee.employee_full_name rescue "" %>'s Profile
+</h1>
 
-<p>
-  <strong>E first name:</strong>
-  <%= @employee.e_first_name %>
-</p>
+<div class="top_container">
+  <hr><br><br><br>
 
-<p>
-  <strong>E last name:</strong>
-  <%= @employee.e_last_name %>
-</p>
+  <div class="panel-group">
+    <div class="col-md-4">
+      <div class="panel panel-default">
+        <div class="panel-heading click_show_important">Employee's Information
+        </div>
+        <div class="panel-body  important_section">
 
-<p>
-  <strong>Address:</strong>
-  <%= @employee.address %>
-</p>
+          <p>
+            <strong>First Name:</strong>
+            <%= @employee.e_first_name %>
+          </p>
 
-<p>
-  <strong>Phone:</strong>
-  <%= @employee.phone %>
-</p>
+          <p>
+            <strong>Last Name:</strong>
+            <%= @employee.e_last_name %>
+          </p>
 
-<p>
-  <strong>Email:</strong>
-  <%= @employee.email %>
-</p>
+          <p>
+            <strong>Address:</strong>
+            <%= @employee.address %>
+          </p>
 
-<p>
-  <strong>Manager:</strong>
-  <%= @employee.manager_id %>
-</p>
+          <p>
+            <strong>Phone:</strong>
+            <%= @employee.phone %>
+          </p>
 
-<%= link_to 'Edit', edit_employee_path(@employee) %> |
-<%= link_to 'Back', employees_path %>
+          <p>
+            <strong>Email:</strong>
+            <%= @employee.email %>
+          </p>
+
+          <p>
+            <strong>Manager:</strong>
+            <%= @employee.manager.manager_full_name rescue "" %>
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="col-md-12 ">
+      <br><br>
+      <%= link_to 'Edit', edit_employee_path(@employee), :class => "btn btn-default" %> |
+      <%= link_to 'Back', employees_path, :class => "btn btn-default" %>
+    </div>
+
+
+  </div>
+</div>

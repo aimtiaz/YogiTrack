@@ -1,19 +1,51 @@
 <p id="notice"><%= notice %></p>
+<h1>
+  Equipment: <%= @equipmeent.eq_desc %>
+</h1>
 
-<p>
-  <strong>Eq desc:</strong>
-  <%= @equipmeent.eq_desc %>
-</p>
+<div class="top_container">
+  <hr><br><br><br>
 
-<p>
-  <strong>Rental price:</strong>
-  <%= @equipmeent.rental_price %>
-</p>
+  <div class="panel-group">
+    <div class="col-md-4">
+      <div class="panel panel-default">
+        <div class="panel-heading click_show_important">Information
+        </div>
+        <div class="panel-body  important_section">
 
-<p>
-  <strong>Equipment status:</strong>
-  <%= @equipmeent.equipment_status_id %>
-</p>
+          <p>
+            <strong>Description:</strong>
+            <%= @equipmeent.eq_desc %>
+          </p>
 
-<%= link_to 'Edit', edit_equipmeent_path(@equipmeent) %> |
-<%= link_to 'Back', equipmeents_path %>
+          <p>
+            <strong>Rental Price:</strong>
+            <%= @equipmeent.rental_price %>
+          </p>
+
+          <p>
+            <strong>Equipment Status:</strong>
+            <%= @equipmeent.equipment_status.equipment_status rescue "" %>
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <div class="col-md-12 ">
+      <br><br>
+      <%= link_to 'Edit', edit_equipmeent_path(@equipmeent),:class => "btn btn-default" %> |
+      <%= link_to 'Back', equipmeents_path, :class => "btn btn-default" %>
+    </div>
+
+
+  </div>
+</div>

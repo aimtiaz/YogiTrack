@@ -1,29 +1,54 @@
 <p id="notice"><%= notice %></p>
+<h1>
+  <%= @manager.manager_full_name rescue "" %>'s Profile
+</h1>
 
-<p>
-  <strong>M first name:</strong>
-  <%= @manager.m_first_name %>
-</p>
+<div class="top_container">
+  <hr><br><br><br>
 
-<p>
-  <strong>M last name:</strong>
-  <%= @manager.m_last_name %>
-</p>
+  <div class="panel-group">
+    <div class="col-md-4">
+      <div class="panel panel-default">
+        <div class="panel-heading click_show_important">Manager's Information
+        </div>
+        <div class="panel-body  important_section">
 
-<p>
-  <strong>Address:</strong>
-  <%= @manager.address %>
-</p>
+          <p>
+            <strong>First Name:</strong>
+            <%= @manager.m_first_name %>
+          </p>
 
-<p>
-  <strong>Phone:</strong>
-  <%= @manager.phone %>
-</p>
+          <p>
+            <strong>M last name:</strong>
+            <%= @manager.m_last_name %>
+          </p>
 
-<p>
-  <strong>Email:</strong>
-  <%= @manager.email %>
-</p>
+          <p>
+            <strong>Address:</strong>
+            <%= @manager.address %>
+          </p>
 
-<%= link_to 'Edit', edit_manager_path(@manager) %> |
-<%= link_to 'Back', managers_path %>
+          <p>
+            <strong>Phone:</strong>
+            <%= @manager.phone %>
+          </p>
+
+          <p>
+            <strong>Email:</strong>
+            <%= @manager.email %>
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="col-md-12 ">
+      <br><br>
+      <%= link_to 'Edit', edit_manager_path(@manager), :class => "btn btn-default" %> |
+      <%= link_to 'Back', :back, :class => "btn btn-default" %>
+    </div>
+
+
+  </div>
+</div>

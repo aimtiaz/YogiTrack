@@ -23,7 +23,7 @@
 
           <div class="field">
             <%= f.label :program_schedule_id, "Select Class", :class => 'control-label' %><br>
-            <%= f.collection_select :program_schedule_id, ProgramSchedule.all, :id, :program_id, { prompt: "Select" }, :class => 'form-control' %><br>
+            <%= f.collection_select :program_schedule_id, ProgramSchedule.all.collect { |f| [ f.id, "#{f.date} #{f.start}" ] }, :first, :last, { prompt: "Select" }, :class => 'form-control' %><br>
           </div>
           <div class="field">
             <%= f.label :customer_id, "Select Client", :class => 'control-label' %><br>

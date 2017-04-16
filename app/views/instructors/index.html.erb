@@ -1,37 +1,74 @@
 <p id="notice"><%= notice %></p>
+<h1>Instructor Search</h1>
 
-<h1>Listing Instructors</h1>
+<div class="panel panel-default">
+  <div class="panel-body">
+    <p id="notice"><%= notice %></p>
 
-<table>
-  <thead>
-    <tr>
-      <th>I first name</th>
-      <th>I last name</th>
-      <th>Address</th>
-      <th>Phone</th>
-      <th>Email</th>
-      <th>Manager</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @instructors.each do |instructor| %>
-      <tr>
-        <td><%= instructor.i_first_name %></td>
-        <td><%= instructor.i_last_name %></td>
-        <td><%= instructor.address %></td>
-        <td><%= instructor.phone %></td>
-        <td><%= instructor.email %></td>
-        <td><%= instructor.manager_id %></td>
-        <td><%= link_to 'Show', instructor %></td>
-        <td><%= link_to 'Edit', edit_instructor_path(instructor) %></td>
-        <td><%= link_to 'Destroy', instructor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+    <%= form_tag customers_path, :method => 'get' do %>
+        <div class="col-xs-4 ">
+          <div class="input-group">
+            <%= text_field_tag :search, params[:search], :placeholder => "Find client", :class => "form-control" %>
+            <span class="input-group-btn">
+             <%= submit_tag "Go", :name => nil, :class => "btn btn-default" %>
+          </span>
+          </div><!-- /input-group -->
+        </div>
+        <% end %><%= link_to "Advanced Search", new_csearch_path, :class=>"btn btn-default" %><br>
+    <br><br><%= link_to 'New Instructor', new_instructor_path, :class=>"btn btn-default" %>
 
-<br>
+    <div class="table-responsive">
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Address</th>
+          <th>Phone</th>
+          <th>Email</th>
+          <th>Manager</th>
 
-<%= link_to 'New Instructor', new_instructor_path %>
+          <th colspan="3"></th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <% @instructors.each do |instructor| %>
+            <tr>
+              <td><%= instructor.i_first_name %></td>
+              <td><%= instructor.i_last_name %></td>
+              <td><%= instructor.address %></td>
+              <td><%= instructor.phone %></td>
+              <td><%= instructor.email %></td>
+              <td><%= instructor.manager.manager_full_name rescue "" %></td>
+              <td><%= link_to 'More Details', instructor, :class=> "btn btn-info btn-sm" %></td>
+              <td><%= link_to 'Edit', edit_instructor_path(instructor), :class=> "btn btn-warning btn-sm" %></td>
+              <td><%= link_to 'Delete', instructor, method: :delete, data: { confirm: 'Are you sure?' }, :class=> "btn btn-danger btn-sm" %></td>
+            </tr>
+        <% end %>
+        </tbody>
+      </table>
+
+
+      <br>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</div>
+
+

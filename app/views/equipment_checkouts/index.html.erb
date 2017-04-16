@@ -1,35 +1,72 @@
 <p id="notice"><%= notice %></p>
+<h1>Equipment Rented</h1>
 
-<h1>Listing Equipment Checkouts</h1>
+<div class="panel panel-default">
+  <div class="panel-body">
+    <p id="notice"><%= notice %></p>
 
-<table>
-  <thead>
-    <tr>
-      <th>Equipment</th>
-      <th>Checkout date</th>
-      <th>Checkin date</th>
-      <th>Equipment status</th>
-      <th>Customer</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @equipment_checkouts.each do |equipment_checkout| %>
-      <tr>
-        <td><%= equipment_checkout.equipmeent_id %></td>
-        <td><%= equipment_checkout.checkout_date %></td>
-        <td><%= equipment_checkout.checkin_date %></td>
-        <td><%= equipment_checkout.equipment_status_id %></td>
-        <td><%= equipment_checkout.customer_id %></td>
-        <td><%= link_to 'Show', equipment_checkout %></td>
-        <td><%= link_to 'Edit', edit_equipment_checkout_path(equipment_checkout) %></td>
-        <td><%= link_to 'Destroy', equipment_checkout, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+    <%= form_tag customers_path, :method => 'get' do %>
+        <div class="col-xs-4 ">
+          <div class="input-group">
+            <%= text_field_tag :search, params[:search], :placeholder => "Find client", :class => "form-control" %>
+            <span class="input-group-btn">
+             <%= submit_tag "Go", :name => nil, :class => "btn btn-default" %>
+          </span>
+          </div><!-- /input-group -->
+        </div>
+        <% end %><%= link_to "Advanced Search", new_csearch_path, :class=>"btn btn-default" %><br>
+    <br><br><%= link_to 'New Equipment Checkout', new_equipment_checkout_path, :class=>"btn btn-default" %>
 
-<br>
+    <div class="table-responsive">
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th>Equipment</th>
+          <th>Checkout Date</th>
+          <th>Checkin Date</th>
+          <th>Equipment Status</th>
+          <th>Customer</th>
 
-<%= link_to 'New Equipment checkout', new_equipment_checkout_path %>
+          <th colspan="3"></th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <% @equipment_checkouts.each do |equipment_checkout| %>
+            <tr>
+              <td><%= equipment_checkout.equipmeent.eq_desc rescue "" %></td>
+              <td><%= equipment_checkout.checkout_date.strftime("%A, %m/%d/%Y") rescue "" %></td>
+              <td><%= equipment_checkout.checkin_date.strftime("%A, %m/%d/%Y") rescue "" %></td>
+              <td><%= equipment_checkout.equipment_status.equipment_status rescue "" %></td>
+              <td><%= equipment_checkout.customer.customer_full_name rescue "" %></td>
+              <td><%= link_to 'More Details', equipment_checkout, :class=> "btn btn-info btn-sm" %></td>
+              <td><%= link_to 'Edit', edit_equipment_checkout_path(equipment_checkout), :class=> "btn btn-warning btn-sm" %></td>
+              <td><%= link_to 'Delete', equipment_checkout, method: :delete, data: { confirm: 'Are you sure?' }, :class=> "btn btn-danger btn-sm" %></td>
+            </tr>
+        <% end %>
+        </tbody>
+      </table>
+
+
+      <br>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</div>
+
+

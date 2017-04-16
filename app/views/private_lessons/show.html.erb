@@ -1,39 +1,71 @@
 <p id="notice"><%= notice %></p>
+<h1>
+   <%= @private_lesson.customer.customer_full_name rescue "" %>'s Private Lesson
+</h1>
 
-<p>
-  <strong>Instructor:</strong>
-  <%= @private_lesson.instructor_id %>
-</p>
+<div class="top_container">
+  <hr><br><br><br>
 
-<p>
-  <strong>Customer:</strong>
-  <%= @private_lesson.customer_id %>
-</p>
+  <div class="panel-group">
+    <div class="col-md-4">
+      <div class="panel panel-default">
+        <div class="panel-heading click_show_important">Private Lesson Information
+        </div>
+        <div class="panel-body  important_section">
 
-<p>
-  <strong>Date:</strong>
-  <%= @private_lesson.date %>
-</p>
+          <p>
+            <strong>Instructor:</strong>
+            <%= @private_lesson.instructor.instructor_full_name rescue "" %>
+          </p>
 
-<p>
-  <strong>Time:</strong>
-  <%= @private_lesson.time %>
-</p>
+          <p>
+            <strong>Customer:</strong>
+            <%= @private_lesson.customer.customer_full_name rescue "" %>
+          </p>
 
-<p>
-  <strong>Cost:</strong>
-  <%= @private_lesson.cost %>
-</p>
+          <p>
+            <strong>Date:</strong>
+            <%= @private_lesson.date.strftime("%A, %m/%d/%Y") rescue "" %>
+          </p>
 
-<p>
-  <strong>Classroom:</strong>
-  <%= @private_lesson.classroom_id %>
-</p>
+          <p>
+            <strong>Time:</strong>
+            <%= @private_lesson.time.strftime("%I:%M%p") rescue "" %>
+          </p>
 
-<p>
-  <strong>Comments:</strong>
-  <%= @private_lesson.comments %>
-</p>
+          <p>
+            <strong>Cost:</strong>
+            <%= @private_lesson.cost %>
+          </p>
 
-<%= link_to 'Edit', edit_private_lesson_path(@private_lesson) %> |
-<%= link_to 'Back', private_lessons_path %>
+          <p>
+            <strong>Classroom:</strong>
+            <%= @private_lesson.classroom_id rescue "" %>
+          </p>
+
+          <p>
+            <strong>Comments:</strong>
+            <%= @private_lesson.comments %>
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <div class="col-md-12 ">
+      <br><br>
+      <%= link_to 'Edit', edit_private_lesson_path(@private_lesson), :class => "btn btn-default" %> |
+      <%= link_to 'Back', private_lessons_path, :class => "btn btn-default" %>
+    </div>
+
+
+  </div>
+</div>

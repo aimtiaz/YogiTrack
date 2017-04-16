@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Program:</strong>
+  <strong>Class:</strong>
   <%= @program_schedule.program.program_description rescue "" %>
 </p>
 
@@ -16,12 +16,12 @@
 </p>
 
 <p>
-  <strong>Start time:</strong>
+  <strong>Start Time:</strong>
   <%= @program_schedule.start.strftime("%I:%M%p") rescue "" %>
 </p>
 
 <p>
-  <strong>End time:</strong>
+  <strong>End Time:</strong>
   <%= @program_schedule.end.strftime("%I:%M%p") rescue "" %>
 </p>
 
@@ -31,7 +31,7 @@
 </p>
 
 <p>
-  <strong>Class size:</strong>
+  <strong>Class Size:</strong>
   <%= @program_schedule.class_size %>
 </p>
 

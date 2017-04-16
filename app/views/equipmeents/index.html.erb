@@ -1,31 +1,68 @@
 <p id="notice"><%= notice %></p>
+<h1>All Equipments</h1>
 
-<h1>Listing Equipmeents</h1>
+<div class="panel panel-default">
+  <div class="panel-body">
+    <p id="notice"><%= notice %></p>
 
-<table>
-  <thead>
-    <tr>
-      <th>Eq desc</th>
-      <th>Rental price</th>
-      <th>Equipment status</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @equipmeents.each do |equipmeent| %>
-      <tr>
-        <td><%= equipmeent.eq_desc %></td>
-        <td><%= equipmeent.rental_price %></td>
-        <td><%= equipmeent.equipment_status_id %></td>
-        <td><%= link_to 'Show', equipmeent %></td>
-        <td><%= link_to 'Edit', edit_equipmeent_path(equipmeent) %></td>
-        <td><%= link_to 'Destroy', equipmeent, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+    <%= form_tag customers_path, :method => 'get' do %>
+        <div class="col-xs-4 ">
+          <div class="input-group">
+            <%= text_field_tag :search, params[:search], :placeholder => "Find client", :class => "form-control" %>
+            <span class="input-group-btn">
+             <%= submit_tag "Go", :name => nil, :class => "btn btn-default" %>
+          </span>
+          </div><!-- /input-group -->
+        </div>
+        <% end %><%= link_to "Advanced Search", new_csearch_path, :class=>"btn btn-default" %><br>
+    <br><br><%= link_to 'New Equipment', new_equipmeent_path, :class=>"btn btn-default" %>
 
-<br>
+    <div class="table-responsive">
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th>Equipment</th>
+          <th>Rental Price</th>
+          <th>Current Status</th>
 
-<%= link_to 'New Equipmeent', new_equipmeent_path %>
+          <th colspan="3"></th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <% @equipmeents.each do |equipmeent| %>
+            <tr>
+              <td><%= equipmeent.eq_desc %></td>
+              <td><%= equipmeent.rental_price %></td>
+              <td><%= equipmeent.equipment_status.equipment_status rescue "" %></td>
+              <td><%= link_to 'More Details', equipmeent, :class=> "btn btn-info btn-sm" %></td>
+              <td><%= link_to 'Edit', edit_equipmeent_path(equipmeent), :class=> "btn btn-warning btn-sm" %></td>
+              <td><%= link_to 'Delete', equipmeent, method: :delete, data: { confirm: 'Are you sure?' }, :class=> "btn btn-danger btn-sm" %></td>
+            </tr>
+        <% end %>
+        </tbody>
+      </table>
+
+
+      <br>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</div>
+
+
