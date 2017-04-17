@@ -4,7 +4,7 @@ class ProgramRostersController < ApplicationController
   # GET /program_rosters
   # GET /program_rosters.json
   def index
-    @program_rosters = ProgramRoster.all
+    @program_rosters = ProgramRoster.search(params[:search])
   end
 
   # GET /program_rosters/1

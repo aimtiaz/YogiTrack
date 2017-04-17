@@ -4,7 +4,7 @@ class ProgramSchedulesController < ApplicationController
   # GET /program_schedules
   # GET /program_schedules.json
   def index
-    @program_schedules = ProgramSchedule.all
+    @program_schedules = ProgramSchedule.search(params[:search])
   end
 
   # GET /program_schedules/1

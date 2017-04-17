@@ -1,14 +1,47 @@
 <p id="notice"><%= notice %></p>
+<h1>
+  <%= @program_roster.customer.customer_full_name rescue "" %>'s Enrollment
+</h1>
 
-<p>
-  <strong>Program schedule:</strong>
-  <%= @program_roster.program_schedule_id %>
-</p>
+<div class="top_container">
+  <hr><br><br><br>
 
-<p>
-  <strong>Customer:</strong>
-  <%= @program_roster.customer_id %>
-</p>
+  <div class="panel-group">
+    <div class="col-md-4">
+      <div class="panel panel-default">
+        <div class="panel-heading click_show_important">Enrollment Information
+        </div>
+        <div class="panel-body  important_section">
 
-<%= link_to 'Edit', edit_program_roster_path(@program_roster) %> |
-<%= link_to 'Back', program_rosters_path %>
+          <p>
+            <strong>Class:</strong>
+            <%= @program_roster.program_schedule_id %>
+          </p>
+          <p>
+            <strong>Date:</strong>
+            <%= @program_roster.program_schedule.date.strftime("%A, %m/%d/%Y") rescue "" %>
+          </p>
+          <p>
+            <strong>Time:</strong>
+            <%= @program_roster.program_schedule.start.strftime("%I:%M%p") rescue "" %>
+          </p>
+
+          <p>
+            <strong>Client:</strong>
+            <%= @program_roster.customer.customer_full_name rescue "" %>
+          </p>
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-12 ">
+      <br><br>
+      <%= link_to 'Edit', edit_program_roster_path(@program_roster), :class => "btn btn-default" %> |
+      <%= link_to 'Back', program_rosters_path, :class => "btn btn-default" %>
+    </div>
+
+
+  </div>
+</div>

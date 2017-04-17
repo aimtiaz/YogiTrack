@@ -1,29 +1,68 @@
 <p id="notice"><%= notice %></p>
+<h1>Class Enrollment</h1>
 
-<h1>Listing Program Rosters</h1>
+<div class="panel panel-default">
+  <div class="panel-body">
+    <p id="notice"><%= notice %></p>
 
-<table>
-  <thead>
-    <tr>
-      <th>Program schedule</th>
-      <th>Customer</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @program_rosters.each do |program_roster| %>
-      <tr>
-        <td><%= program_roster.program_schedule_id %></td>
-        <td><%= program_roster.customer_id %></td>
-        <td><%= link_to 'Show', program_roster %></td>
-        <td><%= link_to 'Edit', edit_program_roster_path(program_roster) %></td>
-        <td><%= link_to 'Destroy', program_roster, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+    <%= form_tag program_rosters_path, :method => 'get' do %>
+        <div class="col-xs-4 ">
+          <div class="input-group">
+            <%= text_field_tag :search, params[:search], :placeholder => "Find Class", :class => "form-control" %>
+            <span class="input-group-btn">
+             <%= submit_tag "Go", :name => nil, :class => "btn btn-default" %>
+          </span>
+          </div><!-- /input-group -->
+        </div>
+        <% end %><%= link_to "Advanced Search", new_csearch_path, :class=>"btn btn-default" %><br>
+    <br><br>
 
-<br>
+    <div class="table-responsive">
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th>Class</th>
+          <th>Time</th>
+          <th>Customer</th>
 
-<%= link_to 'New Program roster', new_program_roster_path %>
+          <th colspan="3"></th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <% @program_rosters.each do |program_roster| %>
+            <tr>
+              <td><%= program_roster.program_schedule.date.strftime("%A, %m/%d/%Y") rescue "" %></td>
+              <td><%= program_roster.program_schedule.start.strftime("%I:%M%p") rescue "" %></td>
+              <td><%= program_roster.customer.customer_full_name rescue "" %></td>
+              <td><%= link_to 'More Details', program_roster, :class=> "btn btn-info btn-sm" %></td>
+              <td><%= link_to 'Edit', edit_program_roster_path(program_roster), :class=> "btn btn-warning btn-sm" %></td>
+              <td><%= link_to 'Delete', program_roster, method: :delete, data: { confirm: 'Are you sure?' }, :class=> "btn btn-danger btn-sm" %></td>
+            </tr>
+        <% end %>
+        </tbody>
+      </table>
+
+
+      <br>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</div>
+
+

@@ -4,7 +4,9 @@ class EquipmentCheckoutsController < ApplicationController
   # GET /equipment_checkouts
   # GET /equipment_checkouts.json
   def index
-    @equipment_checkouts = EquipmentCheckout.all
+    @equipment_checkouts = EquipmentCheckout.search(params[:search])
+    #Equipmeent.where(:availability => true)
+
   end
 
   # GET /equipment_checkouts/1
