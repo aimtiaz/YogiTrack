@@ -1,29 +1,48 @@
 <%= form_for(@equipmeent) do |f| %>
-  <% if @equipmeent.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@equipmeent.errors.count, "error") %> prohibited this equipmeent from being saved:</h2>
+    <% if @equipmeent.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@equipmeent.errors.count, "error") %> prohibited this instructor from being saved:</h2>
 
-      <ul>
-      <% @equipmeent.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+          <ul>
+            <% @equipmeent.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+    <div class="panel panel-default">
+      <div class="panel-heading"><h4>Equipment Form
 
-  <div class="field">
-    <%= f.label :eq_desc %><br>
-    <%= f.text_field :eq_desc %>
-  </div>
-  <div class="field">
-    <%= f.label :rental_price %><br>
-    <%= f.text_field :rental_price %>
-  </div>
-  <div class="field">
-    <%= f.label :equipment_status_id %><br>
-    <%= f.number_field :equipment_status_id %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+        <p id="demo"></p>
+      </h4>
+      </div>
+      <div class="panel-body">
+        <form>
+
+          <div class="field">
+            <%= f.label :eq_desc , "Equipment NAme", :class => 'control-label' %><br>
+            <%= f.text_field :eq_desc, :class => 'form-control' %><br>
+          </div>
+          <div class="field">
+            <%= f.label :rental_price, "Rental Price", :class => 'control-label' %><br>
+            <%= f.text_field :rental_price, :class => 'form-control' %><br>
+          </div>
+
+          <div class="field">
+            <%= f.label :equipment_status_id, "Assign a Status", :class => 'control-label' %><br>
+            <%= f.collection_select :equipment_status_id, EquipmentStatus.all, :id, :equipment_status, { prompt: "Select" }, :class => 'form-control' %><br>
+          </div>
+          <div class="actions">
+            <%= f.submit %>
+          </div>
 <% end %>
+<br>
+
+
+
+
+</form>
+
+
+</div>
+</div>

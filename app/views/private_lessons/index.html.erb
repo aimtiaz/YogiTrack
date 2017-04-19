@@ -7,16 +7,7 @@
 
 
     <%= form_tag customers_path, :method => 'get' do %>
-        <div class="col-xs-4 ">
-          <div class="input-group">
-            <%= text_field_tag :search, params[:search], :placeholder => "Find client", :class => "form-control" %>
-            <span class="input-group-btn">
-             <%= submit_tag "Go", :name => nil, :class => "btn btn-default" %>
-          </span>
-          </div><!-- /input-group -->
-        </div>
-        <% end %><%= link_to "Advanced Search", new_csearch_path, :class=>"btn btn-default" %><br>
-    <br><br><%= link_to 'New Private Lesson', new_private_lesson_path, :class=>"btn btn-default" %>
+        <% end %>
 
     <div class="table-responsive">
       <table class="table table-striped">

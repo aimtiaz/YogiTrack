@@ -1,21 +1,40 @@
 <%= form_for(@program) do |f| %>
-  <% if @program.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@program.errors.count, "error") %> prohibited this program from being saved:</h2>
+    <% if @program.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@program.errors.count, "error") %> prohibited this manager from being saved:</h2>
 
-      <ul>
-      <% @program.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+          <ul>
+            <% @program.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
 
-  <div class="field">
-    <%= f.label :program_description %><br>
-    <%= f.text_field :program_description %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+    <div class="panel panel-default">
+      <div class="panel-heading"><h4>New Program/Class Type
+
+        <p id="demo"></p>
+      </h4>
+      </div>
+      <div class="panel-body">
+        <form>
+
+          <div class="field">
+            <%= f.label :program_description, "Program/Class Description", :class => 'control-label' %><br>
+            <%= f.text_field :program_description, :class => 'form-control' %><br>
+          </div>
+          <div class="actions">
+            <%= f.submit %>
+          </div>
 <% end %>
+<br>
+
+
+
+
+</form>
+
+
+</div>
+</div>

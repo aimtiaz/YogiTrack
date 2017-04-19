@@ -90,7 +90,91 @@
     <div class="container_12">
       <div class="main">
         <div class="grid_12 title">Class Types & Schedule</div>
+        <div class="col-sm-9 col-md-9">
+          <div class="col-md-12">
 
+            <div class="panel panel-default">
+              <div class="panel-heading"><h4>Today's Sessions:
+
+                <p id="demo"></p>
+                <script>
+                  document.getElementById("demo").innerHTML = Date();
+                </script>
+              </h4>
+              </div>
+              <div class="panel-body">
+
+                <table class="table">
+                  <thead class="thead-inverse">
+                  <tr>
+                    <th>Class</th>
+                    <th>Duration</th>
+                    <th>Instructor</th>
+                    <th>Classroom</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <th><a href="#" data-toggle="tooltip" title="Wake up with Yoga in the morning so you’re ready to take on the day or if that’s not your thing you can wind down after of a long day at our candlelight flow. Luck for you we offer both options.">JY Flow Wakeup</a></th>
+                    <td>7:30 AM - 8:30 AM</td>
+                    <td><a href="http://www.jquery2dotnet.com">Billy Henry</a></td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <th><a href="#" data-toggle="tooltip" title="This class is a unique combination of our traditional vinyasa class combined with an optional guided meditation at the end. You can choose to participate or leave before the guided meditation begins. Yogis choice.">JY Flow</a></th>
+                    <td>9:00 AM - 10:15 AM</td>
+                    <td><a href="http://www.jquery2dotnet.com">Margaret Long</a></td>
+                    <td>2</td>
+                  </tr>
+                  <tr>
+                    <th><a href="#" data-toggle="tooltip" title="Gentle flow, formally slow flow, is ideal for beginner yogi's or advanced students who want to wind down and are looking for slower practice.">Gentle Yoga</a></th>
+                    <td>10:30 AM - 11:30 AM</td>
+                    <td><a href="http://www.jquery2dotnet.com">Pamela Adams</a></td>
+                    <td>3</td>
+                  </tr>
+                  <tr>
+                    <th><a href="#" data-toggle="tooltip" title="tep out of your comfort zone & take your practice to the next level. Not only will you develop strength, stamina and flexibility but you'll have fun doing it.">30 Day Challenge</a></th>
+                    <td>11:45 AM - 12:15 PM</td>
+                    <td><a href="http://www.jquery2dotnet.com">Ruth Sullivan</a></td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <th><a href="#" data-toggle="tooltip" title="A deeply relaxing practice of supported poses, guided relaxation, yogic breathing, and an extended savasana (final resting pose). This meditative practice cultivates a necessary balance between body and mind while dissolving physical and mental tension. Props such as blankets, bolsters, blocks, and straps are used to help support and restore the body. This class is great for any level student seeking to reduce the effects of stress and injury.">Meditation</a></th>
+                    <td>12:00 PM - 1:00 PM</td>
+                    <td><a href="http://www.jquery2dotnet.com">	Albert Rodriguez</a></td>
+                    <td>2</td>
+                  </tr>
+                  <tr>
+                    <th><a href="#" data-toggle="tooltip" title="This vinyasa flow class is for those who feel ready to take their practice to the next energizing level. Students build strength, balance and flexibility while linking breath with mindful movement. Prepare to sweat and have fun as we detoxify the body and encourage muscle relaxation. You'll leave feeling refreshed and renewed. We offer plenty of options and modifications for all yogis so you are able to modify your practice or add some challenging moves to increase the intensity. This class focuses on truly building and cultivating your own practice.">JY Flow</a></th>
+                    <td>1:15 PM - 2:30 PM</td>
+                    <td><a href="http://www.jquery2dotnet.com">Ruth Sullivan</a></td>
+                    <td>3</td>
+                  </tr>
+                  <tr>
+                    <th><a href="#" data-toggle="tooltip" title="This class is intended for those who are comfortable in an intermediate class and feel ready to expand their practice. You will use your knowledge of postures and breathing to practice creative, physically demanding and challenging sequences. Power flow includes optional inversion practice and the opportunity to explore arm balances. This intensity should drastically improve your overall strength while detoxifying the body and building mind-body awareness. You do not need to be advanced to attend Power Yoga, this class simply provides the opportunity to broaden your understanding of asana (physical poses) while encouraging you to move at your own pace.">JY Power Flow</a></th>
+                    <td>4:00 PM - 5:15 PM</td>
+                    <td><a href="http://www.jquery2dotnet.com">Anna Andrews</a></td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <th><a href="#" data-toggle="tooltip" title="A deeply relaxing practice of supported poses, guided relaxation, yogic breathing, and an extended savasana (final resting pose). This meditative practice cultivates a necessary balance between body and mind while dissolving physical and mental tension. Props such as blankets, bolsters, blocks, and straps are used to help support and restore the body. This class is great for any level student seeking to reduce the effects of stress and injury.">Flow + Restore</a></th>
+                    <td>7:00 PM - 8:15 PM</td>
+                    <td><a href="http://www.jquery2dotnet.com">Jason Perry</a></td>
+                    <td>2</td>
+                  </tr>
+                  <tr>
+                    <th><a href="#" data-toggle="tooltip" title="Fundamentals">Fundamentals of Yoga</a></th>
+                    <td>8:30 PM - 9:15 PM</td>
+                    <td><a href="http://www.jquery2dotnet.com">Anna Andrews</a></td>
+                    <td>2</td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div><!--/panel-body-->
+            </div><!--/panel-->
+
+          </div>
+        </div>
 
 
         <!-- #footer-widget-area -->
@@ -115,6 +199,10 @@
 
 
 </div><!-- #wrapper -->
-
+<script>
+  $(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+  });
+</script>
 </body>
 </html>

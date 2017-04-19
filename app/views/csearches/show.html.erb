@@ -18,7 +18,7 @@
     <p>Phone: <%= cs.phone %></p>
     <p>Email: <%= cs.email %></p>
     <p>Emergency Contact Number: <%= cs.emergency_phone %></p>
-    <p>Membership Type: <%= cs.membership_id %></p>
+    <p>Membership Type: <%= cs.membership.membership_description rescue "" %></p>
     <p>Health Concerns: <%= cs.health_concern %></p>
   </div>
 

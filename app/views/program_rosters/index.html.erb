@@ -9,13 +9,13 @@
     <%= form_tag program_rosters_path, :method => 'get' do %>
         <div class="col-xs-4 ">
           <div class="input-group">
-            <%= text_field_tag :search, params[:search], :placeholder => "Find Class", :class => "form-control" %>
+            <%= text_field_tag :search, params[:search], :placeholder => "Enter Client ID", :class => "form-control" %>
             <span class="input-group-btn">
              <%= submit_tag "Go", :name => nil, :class => "btn btn-default" %>
           </span>
           </div><!-- /input-group -->
         </div>
-        <% end %><%= link_to "Advanced Search", new_csearch_path, :class=>"btn btn-default" %><br>
+        <% end %><br>
     <br><br>
 
     <div class="table-responsive">

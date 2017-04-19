@@ -1,29 +1,45 @@
 <p id="notice"><%= notice %></p>
+<h1>
+  Equipment Checkout Details
+</h1>
 
-<p>
-  <strong>Equipment:</strong>
-  <%= @equipment_checkout.equipmeent_id %>
-</p>
+<div class="top_container">
+  <hr><br><br><br>
 
-<p>
-  <strong>Checkout date:</strong>
-  <%= @equipment_checkout.checkout_date %>
-</p>
+  <div class="panel-group">
+    <div class="col-md-4">
+      <div class="panel panel-default">
+        <div class="panel-heading click_show_important">Information
+        </div>
+        <div class="panel-body  important_section">
 
-<p>
-  <strong>Checkin date:</strong>
-  <%= @equipment_checkout.checkin_date %>
-</p>
+          <p>
+            <strong>Equipment:</strong>
+            <%= @equipment_checkout.equipmeent.eq_desc rescue "" %>
+          </p>
 
-<p>
-  <strong>Equipment status:</strong>
-  <%= @equipment_checkout.equipment_status_id %>
-</p>
+          <p>
+            <strong>Checkout Date:</strong>
+            <%= @equipment_checkout.checkout_date.strftime("%A, %m/%d/%Y") rescue "" %>
+          </p>
 
-<p>
-  <strong>Customer:</strong>
-  <%= @equipment_checkout.customer_id %>
-</p>
+          <p>
+            <strong>Checkin Date:</strong>
+            <%= @equipment_checkout.checkin_date.strftime("%A, %m/%d/%Y") rescue "" %>
+          </p>
 
-<%= link_to 'Edit', edit_equipment_checkout_path(@equipment_checkout) %> |
+          <p>
+            <strong>Equipment status:</strong>
+            <%= @equipment_checkout.equipment_status.equipment_status rescue "" %>
+          </p>
+
+          <p>
+            <strong>Customer:</strong>
+            <%= @equipment_checkout.customer.customer_full_name rescue "" %>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <%= link_to 'Edit', edit_equipment_checkout_path(@equipment_checkout) %> |
 <%= link_to 'Back', equipment_checkouts_path %>

@@ -2,28 +2,47 @@
 
 <%= form_for @csearch, html: {class: "pure-form"} do |c| %>
 
-    <div class="field">
-      <%= c.label :keywords %><br />
-      <%= c.text_field :keywords %>
-    </div>
-    <div class="field">
-      <%= c.label :first %><br />
-      <%= c.text_field :first %>
-    </div>
-    <div class="field">
-      <%= c.label :last %><br />
-      <%= c.text_field :last %>
-    </div>
-    <div class="field">
-      <%= c.label :phone %><br />
-      <%= c.text_field :phone %>
-    </div>
-    <div class="field">
-      <%= c.label :email %><br />
-      <%= c.text_field :email %>
-    </div>
 
-    <div class="actions"><%= c.submit "Search", class: "pure-button pure-button-primary" %></div>
-  <% end %>
+<div class="panel panel-default">
+  <div class="panel-heading"><h4>Employee Report
 
-<p><%= link_to 'Back', customers_path %></p>
+    <p id="demo"></p>
+  </h4>
+  </div>
+  <div class="panel-body">
+    <form>
+
+      <div class="field">
+        <%= c.label :keywords, "Keywords", :class => 'control-label' %><br>
+        <%= c.text_field :keywords, :class => 'form-control' %><br>
+      </div>
+      <div class="field">
+        <%= c.label :first, "First Name", :class => 'control-label' %><br>
+        <%= c.text_field :first, :class => 'form-control' %><br>
+      </div>
+      <div class="field">
+        <%= c.label :last, "Last Name", :class => 'control-label' %><br>
+        <%= c.text_area :last, :class => 'form-control' %><br>
+      </div>
+      <div class="field">
+        <%= c.label :phone, "Phone Number", :class => 'control-label' %><br>
+        <%= c.text_field :phone, :class => 'form-control' %><br>
+      </div>
+      <div class="field">
+        <%= c.label :email, "Email Address", :class => 'control-label' %><br>
+        <%= c.text_field :email, :class => 'form-control' %><br>
+      </div>
+      <div class="actions"><%= c.submit "Search", class: "pure-button pure-button-primary" %></div>
+      <% end %>
+
+      <br>
+
+
+
+
+    </form>
+
+
+  </div>
+</div>
+
