@@ -3,6 +3,10 @@ belongs_to :equipmeent
   belongs_to :customer
   belongs_to :equipment_status
 
+validates_presence_of :equipment_status_id
+
+
+
   def self.checkava
     Equipmeent.where(:equipment_status_id => 1).all?
 

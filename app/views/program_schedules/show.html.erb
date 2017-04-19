@@ -1,39 +1,60 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Class:</strong>
-  <%= @program_schedule.program.program_description rescue "" %>
-</p>
+<div class="top_container">
+  <hr><br><br><br>
 
-<p>
-  <strong>Instructor:</strong>
-  <%= @program_schedule.instructor.instructor_full_name rescue "" %>
-</p>
+  <div class="panel-group">
+    <div class="col-md-4">
+      <div class="panel panel-default">
+        <div class="panel-heading click_show_important">Class Information
+        </div>
+        <div class="panel-body  important_section">
 
-<p>
-  <strong>Date:</strong>
-  <%= @program_schedule.date.strftime("%A, %m/%d/%Y") rescue "" %>
-</p>
+          <p>
+            <strong>Class:</strong>
+            <%= @program_schedule.program.program_description rescue "" %>
+          </p>
+          <p>
+            <strong>Instructor:</strong>
+            <%= @program_schedule.instructor.instructor_full_name rescue "" %>
+          </p>
 
-<p>
-  <strong>Start Time:</strong>
-  <%= @program_schedule.start.strftime("%I:%M%p") rescue "" %>
-</p>
+          <p>
+            <strong>Date:</strong>
+            <%= @program_schedule.date.strftime("%A, %m/%d/%Y") rescue "" %>
+          </p>
 
-<p>
-  <strong>End Time:</strong>
-  <%= @program_schedule.end.strftime("%I:%M%p") rescue "" %>
-</p>
+          <p>
+            <strong>Start Time:</strong>
+            <%= @program_schedule.start.strftime("%I:%M%p") rescue "" %>
+          </p>
 
-<p>
-  <strong>Classroom:</strong>
-  <%= @program_schedule.classroom_id %>
-</p>
+          <p>
+            <strong>End Time:</strong>
+            <%= @program_schedule.end.strftime("%I:%M%p") rescue "" %>
+          </p>
 
-<p>
-  <strong>Class Size:</strong>
-  <%= @program_schedule.class_size %>
-</p>
+          <p>
+            <strong>Classroom:</strong>
+            <%= @program_schedule.classroom_id rescue "" %>
+          </p>
 
-<%= link_to 'Edit', edit_program_schedule_path(@program_schedule) %> |
-<%= link_to 'Back', program_schedules_path %>
+          <p>
+            <strong>Class Size:</strong>
+            <%= @program_schedule.class_size %>
+          </p>
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-12 ">
+      <br><br>
+      <%= link_to 'Edit', edit_program_schedule_path(@program_schedule), :class => "btn btn-default" %> |
+      <%= link_to 'Back', program_schedules_path, :class => "btn btn-default" %>
+    </div>
+
+
+  </div>
+</div>
